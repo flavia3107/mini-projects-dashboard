@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Widget Dashboard</title>
+	<link rel="stylesheet" href="styles.css"> <!-- Linking CSS for layout -->
+	<script src="app.js" defer></script> <!-- Linking JS for functionality -->
+</head>
+
+<body>
+	<div class="dashboard">
+		<div class="widget" id="quote-widget">
+			<h2>Random Quote</h2>
+			<p id="quote-text">Loading...</p>
+			<button id="quote-button">Get Quote</button>
+		</div>
+		<div class="widget" id="todo-widget">
+			<h2>Todo List</h2>
+			<ul id="todo-list">
+				<li>Loading...</li>
+			</ul>
+		</div>
+		<div class="widget" id="bmi-widget">
+			<h2>BMI Calculator</h2>
+			<form id="bmi-form">
+				<input type="number" id="bmi-weight" placeholder="Weight (kg)" required>
+				<input type="number" id="bmi-height" placeholder="Height (m)" required>
+				<button type="submit">Calculate BMI</button>
+			</form>
+			<p id="bmi-result"></p>
+		</div>
+		<div class="widget" id="cat-widget">
+			<h2>Random Cat Image</h2>
+			<img id="cat-image" src="" alt="Random Cat" />
+			<button id="cat-button">Get Cat Image</button>
+		</div>
+	</div>
+</body>
+
+</html>
