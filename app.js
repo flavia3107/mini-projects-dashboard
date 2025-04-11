@@ -77,28 +77,6 @@ jokeButton.addEventListener('click', () => {
 		});
 });
 
-// Lyrics Finder - lyrics.ovh
-const lyricsButton = document.getElementById('lyrics-button');
-const lyricsResult = document.getElementById('lyrics-result');
-lyricsButton.addEventListener('click', () => {
-	const artist = document.getElementById('artist').value;
-	const song = document.getElementById('song').value;
-
-	if (!artist || !song) {
-		lyricsResult.textContent = "Please enter both artist and song.";
-		return;
-	}
-
-	fetch(`https://api.lyrics.ovh/v1/${artist}/${song}`)
-		.then(res => res.json())
-		.then(data => {
-			lyricsResult.textContent = data.lyrics || "Lyrics not found.";
-		})
-		.catch(() => {
-			lyricsResult.textContent = "Failed to load lyrics.";
-		});
-});
-
 // NASA Image of the Day
 const nasaImage = document.getElementById('nasa-image');
 const nasaTitle = document.getElementById('nasa-title');
