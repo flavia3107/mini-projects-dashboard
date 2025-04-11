@@ -12,6 +12,36 @@
 
 <body>
 	<div class="dashboard">
+		<div class="flex-row">
+			<div class="widget flex-row" id="nasa-widget">
+				<div class="flex-column">
+					<img id="nasa-image" src="" alt="NASA Image" />
+				</div>
+				<div class="flex-column">
+					<h2>NASA Image of the Day</h2>
+					<p id="nasa-title"></p>
+					<p id="nasa-description"></p>
+				</div>
+			</div>
+			<div class="widget analog-clock-widget">
+				<h2>Analog Clock</h2>
+				<div class="clock">
+					<!-- Number labels -->
+					<div class="number number12">12</div>
+					<div class="number number3">3</div>
+					<div class="number number6">6</div>
+					<div class="number number9">9</div>
+
+					<!-- Hands -->
+					<div class="hand hour" id="hour-hand"></div>
+					<div class="hand minute" id="minute-hand"></div>
+					<div class="hand second" id="second-hand"></div>
+					<div class="center-dot"></div>
+				</div>
+			</div>
+
+		</div>
+
 		<div class="widget" id="quote-widget">
 			<h2>Random Quote</h2>
 			<p id="quote-text">Loading...</p>
@@ -49,12 +79,7 @@
 			<button id="lyrics-button">Get Lyrics</button>
 			<pre id="lyrics-result"></pre>
 		</div>
-		<div class="widget" id="nasa-widget">
-			<h2>NASA Image of the Day</h2>
-			<img id="nasa-image" src="" alt="NASA Image" />
-			<p id="nasa-title"></p>
-			<p id="nasa-description"></p>
-		</div>
+
 		<div class="widget" id="fact-widget">
 			<h2>Random Fact</h2>
 			<p id="fact-text">Click the button to learn something new!</p>

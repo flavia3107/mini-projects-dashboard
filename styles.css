@@ -15,11 +15,11 @@ body {
 }
 
 .dashboard {
-	display: grid;
+	/* display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	gap: 20px;
 	max-width: 1200px;
-	width: 100%;
+	width: 100%; */
 }
 
 .widget {
@@ -28,6 +28,106 @@ body {
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	text-align: center;
+}
+
+#nasa-widget {
+	width: 75%;
+	height: 30rem;
+}
+
+#nasa-image {
+	width: 40rem;
+	height: 100%;
+	object-fit: cover;
+}
+
+.analog-clock-widget {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.clock {
+	position: relative;
+	width: 220px;
+	height: 220px;
+	border: 10px solid #333;
+	border-radius: 50%;
+	background: radial-gradient(circle at center, #f9f9f9, #eee);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	margin-top: 1rem;
+}
+
+/* Hands */
+.hand {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom;
+	transform: translateX(-50%) rotate(0deg);
+}
+
+.hour {
+	width: 6px;
+	height: 50px;
+	background-color: #222;
+	z-index: 3;
+}
+
+.minute {
+	width: 4px;
+	height: 70px;
+	background-color: #555;
+	z-index: 2;
+}
+
+.second {
+	width: 2px;
+	height: 90px;
+	background-color: red;
+	z-index: 1;
+}
+
+/* Center dot */
+.center-dot {
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background: #000;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+}
+
+/* Numbers */
+.number {
+	position: absolute;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: #111;
+}
+
+.number12 {
+	top: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.number3 {
+	top: 50%;
+	right: 8px;
+	transform: translateY(-50%);
+}
+.number6 {
+	bottom: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.number9 {
+	top: 50%;
+	left: 8px;
+	transform: translateY(-50%);
 }
 
 h2 {
@@ -59,4 +159,13 @@ input {
 	max-width: 100%;
 	height: auto;
 	margin-top: 10px;
+}
+
+.flex-row {
+	display: flex;
+}
+
+.flex-colum {
+	display: flex;
+	flex-direction: column;
 }

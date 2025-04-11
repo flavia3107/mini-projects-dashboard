@@ -11,9 +11,10 @@ quoteButton.addEventListener('click', () => {
 				'X-RapidAPI-Host': 'quotes85.p.rapidapi.com'
 			}
 		})
-		.then(response => response.json())
+		.then(res => res.text())
 		.then(data => {
-			quoteText.textContent = `"${data.contents.quotes[0].quote}" - ${data.contents.quotes[0].author}`;
+			console.log('Data', data)
+			quoteText.textContent = `"${data}"`;
 		})
 		.catch(error => {
 			quoteText.textContent = "Failed to load quote!";
@@ -151,3 +152,22 @@ movieQuoteButton.addEventListener('click', () => {
 			movieQuoteText.textContent = "Failed to load movie quote.";
 		});
 });
+
+function updateAnalogClock() {
+	const now = new Date();
+
+	const second = now.getSeconds();
+	const minute = now.getMinutes();
+	const hour = now.getHours();
+
+	const secondDeg = second * 6; // 360 / 60
+	const minuteDeg = minute * 6 + second * 0.1;
+	const hourDeg = ((hour % 12) / 12) * 360 + minute * 0.5;
+
+	document.getElementById("second-hand").style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
+	document.getElementById("minute-hand").style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
+	document.getElementById("hour-hand").style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+}
+
+setInterval(updateAnalogClock, 1000);
+updateAnalogClock(); // initial call
