@@ -42,26 +42,67 @@
 
 		</div>
 
+		<div class="flex-row">
+			<div class="flex-column">
+				<div class="widget" id="todo-widget">
+					<h2>Todo List</h2>
+					<ul id="todo-list">
+						<li>Loading...</li>
+					</ul>
+				</div>
+			</div>
+			<div class="flex-column">
+				<div class="widget calculator-widget">
+					<h2>🧮 Calculator</h2>
+					<div class="calculator">
+						<input type="text" class="calc-display" id="calc-display" disabled />
+
+						<div class="calc-buttons">
+							<button class="btn" data-value="7">7</button>
+							<button class="btn" data-value="8">8</button>
+							<button class="btn" data-value="9">9</button>
+							<button class="btn op" data-value="/">÷</button>
+
+							<button class="btn" data-value="4">4</button>
+							<button class="btn" data-value="5">5</button>
+							<button class="btn" data-value="6">6</button>
+							<button class="btn op" data-value="*">×</button>
+
+							<button class="btn" data-value="1">1</button>
+							<button class="btn" data-value="2">2</button>
+							<button class="btn" data-value="3">3</button>
+							<button class="btn op" data-value="-">−</button>
+
+							<button class="btn" data-value="0">0</button>
+							<button class="btn" data-value=".">.</button>
+							<button class="btn equals" id="equals">=</button>
+							<button class="btn op" data-value="+">+</button>
+
+							<button class="btn clear" id="clear">C</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-column">
+				<div class="widget" id="bmi-widget">
+					<h2>BMI Calculator</h2>
+					<form id="bmi-form">
+						<input type="number" id="bmi-weight" placeholder="Weight (kg)" required>
+						<input type="number" id="bmi-height" placeholder="Height (m)" required>
+						<button type="submit">Calculate BMI</button>
+					</form>
+					<p id="bmi-result"></p>
+				</div>
+			</div>
+		</div>
+
 		<div class="widget" id="quote-widget">
 			<h2>Random Quote</h2>
 			<p id="quote-text">Loading...</p>
 			<button id="quote-button">Get Quote</button>
 		</div>
-		<div class="widget" id="todo-widget">
-			<h2>Todo List</h2>
-			<ul id="todo-list">
-				<li>Loading...</li>
-			</ul>
-		</div>
-		<div class="widget" id="bmi-widget">
-			<h2>BMI Calculator</h2>
-			<form id="bmi-form">
-				<input type="number" id="bmi-weight" placeholder="Weight (kg)" required>
-				<input type="number" id="bmi-height" placeholder="Height (m)" required>
-				<button type="submit">Calculate BMI</button>
-			</form>
-			<p id="bmi-result"></p>
-		</div>
+
+
 		<div class="widget" id="cat-widget">
 			<h2>Random Cat Image</h2>
 			<img id="cat-image" src="" alt="Random Cat" />
