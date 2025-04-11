@@ -45,6 +45,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 24%;
 }
 
 .clock {
@@ -163,6 +164,11 @@ input {
 
 .flex-row {
 	display: flex;
+	gap: 1rem;
+}
+
+.flex-row:not(.widget) {
+	margin-bottom: 1rem;
 }
 
 .flex-colum {
@@ -223,4 +229,22 @@ input {
 	grid-column: span 4;
 	background-color: #f27c7c;
 	color: white;
+}
+
+.cat {
+	width: 30%;
+}
+
+.second-row {
+	height: 30rem;
+}
+
+.second-row .widget,
+.third-row .widget {
+	height: 100%;
+}
+
+.third-row .flex-column {
+	width: 33%;
+	height: 12rem;
 }
