@@ -248,7 +248,11 @@ input {
 
 .third-row .flex-column {
 	width: 33%;
-	height: 12rem;
+	height: 25rem;
+}
+
+#bmi-widget {
+	height: 25rem;
 }
 
 .quotes {
