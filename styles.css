@@ -273,6 +273,14 @@ input {
 	height: 25rem;
 }
 
+#bmi-widget {
+	width: 31rem;
+}
+
+#movie-quote-widget {
+	width: 35rem;
+}
+
 .quotes {
 	width: 41%;
 	gap: 1.5rem;
@@ -376,7 +384,7 @@ li.flex-row {
 
 .fun-fact-widget {
 	background-color: #fafcff;
-	border: 1px dashed #c2d3e7;
+	border: 2px solid #c2d3e7;
 	border-radius: 1rem;
 	text-align: center;
 	font-family: "Comic Sans MS", "Segoe UI", sans-serif;
@@ -394,4 +402,35 @@ li.flex-row {
 
 #fact-button {
 	cursor: pointer;
+}
+
+#joke-widget {
+	background-color: #fffbf6;
+	border: 2px solid #ffe0b2;
+	border-radius: 12px;
+	padding: 20px;
+	font-family: "Segoe UI", sans-serif;
+	color: #4e342e;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	text-align: center;
+	width: 18rem;
+}
+
+#joke-text {
+	font-size: 1.1rem;
+	line-height: 1.4;
+	margin-bottom: 15px;
+	min-height: 60px;
+}
+
+.joke-refresh {
+	font-size: 1.5rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+#cat-widget {
+	width: 25rem;
 }

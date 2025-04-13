@@ -75,8 +75,6 @@ function getNasaImage() {
 		});
 }
 
-
-
 // Random Fact - Useless Facts API
 const factButton = document.getElementById('fact-button');
 const factText = document.getElementById('fact-text');
@@ -207,7 +205,7 @@ function randomQuoteCallback() {
 
 dogCallback();
 // movieQuoteCallback();
-randomFactCallback();
+// randomFactCallback();
 randomJokeCallback();
-randomQuoteCallback();
-getNasaImage();
+// randomQuoteCallback();
+// getNasaImage();
