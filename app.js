@@ -49,16 +49,31 @@ bmiForm.addEventListener('submit', (event) => {
 
 // Get Random Cat Image
 const catButton = document.getElementById('cat-button');
-const catImage = document.getElementById('cat-image');
+const petImage = document.getElementById('pet-image');
 catButton.addEventListener('click', () => {
 	fetch('https://api.thecatapi.com/v1/images/search')
 		.then(response => response.json())
 		.then(data => {
-			catImage.src = data[0].url;
+			petImage.src = data[0].url;
 		})
 		.catch(error => {
-			catImage.src = "";
+			petImage.src = "";
 			alert("Failed to load cat image!");
+		});
+});
+
+
+// Get Random Dog Image
+const dogButton = document.getElementById('dog-button');
+dogButton.addEventListener('click', () => {
+	fetch('https://dog.ceo/api/breeds/image/random')
+		.then(response => response.json())
+		.then(data => {
+			petImage.src = data.message;
+		})
+		.catch(error => {
+			petImage.src = "";
+			alert("Failed to load dog image!");
 		});
 });
 
