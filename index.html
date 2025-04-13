@@ -12,6 +12,9 @@
 	<script src="/assets/fallbackData/funFact.js" defer></script>
 	<script src="/assets/fallbackData/movieQuotes.js" defer></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 
 <body>
@@ -151,11 +154,12 @@
 			<div class="widget" id="bmi-widget">
 				<h2>BMI Check</h2>
 				<form id="bmi-form">
-					<input type="number" id="bmi-weight" placeholder="Weight (kg)" required>
-					<input type="number" id="bmi-height" placeholder="Height (m)" required>
+					<input type="number" id="bmi-weight" placeholder="Weight (kg)" required step="any">
+					<input type="number" id="bmi-height" placeholder="Height (m)" required step="any">
 					<button type="submit">Calculate BMI</button>
 				</form>
 				<p id="bmi-result"></p>
+				<div id="container"></div>
 			</div>
 		</div>
 	</div>
