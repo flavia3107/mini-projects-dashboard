@@ -299,3 +299,13 @@ li.flex-row {
 #nasa-title {
 	margin-bottom: 0.5rem;
 }
+
+#dog-button,
+#cat-button {
+	cursor: pointer;
+}
+
+.pet-title {
+	display: flex;
+	justify-content: space-between;
+}

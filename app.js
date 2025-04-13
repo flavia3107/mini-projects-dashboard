@@ -1,25 +1,7 @@
-// app.js
-
 // Get Random Quote
 const quoteButton = document.getElementById('quote-button');
 const quoteText = document.getElementById('quote-text');
-quoteButton.addEventListener('click', () => {
-	fetch('https://quotes85.p.rapidapi.com/getrandomquote',
-		{
-			headers: {
-				'X-RapidAPI-Key': RapidAPI_KEY,
-				'X-RapidAPI-Host': 'quotes85.p.rapidapi.com'
-			}
-		})
-		.then(res => res.text())
-		.then(data => {
-			console.log('Data', data)
-			quoteText.textContent = `"${data}"`;
-		})
-		.catch(error => {
-			quoteText.textContent = "Failed to load quote!";
-		});
-});
+quoteButton.addEventListener('click', randomQuoteCallback);
 
 // Get Todo List (using JSONPlaceholder API)
 const todoList = document.getElementById('todo-list');
@@ -62,35 +44,14 @@ catButton.addEventListener('click', () => {
 		});
 });
 
-
 // Get Random Dog Image
 const dogButton = document.getElementById('dog-button');
-dogButton.addEventListener('click', () => {
-	fetch('https://dog.ceo/api/breeds/image/random')
-		.then(response => response.json())
-		.then(data => {
-			petImage.src = data.message;
-		})
-		.catch(error => {
-			petImage.src = "";
-			alert("Failed to load dog image!");
-		});
-});
+dogButton.addEventListener('click', dogCallback);
 
+// Get Random Joke
 const jokeButton = document.getElementById('joke-button');
 const jokeText = document.getElementById('joke-text');
-jokeButton.addEventListener('click', () => {
-	fetch('https://v2.jokeapi.dev/joke/Any')
-		.then(res => res.json())
-		.then(data => {
-			jokeText.textContent = data.type === "single"
-				? data.joke
-				: `${data.setup} ... ${data.delivery}`;
-		})
-		.catch(() => {
-			jokeText.textContent = "Failed to load a joke!";
-		});
-});
+jokeButton.addEventListener('click', randomJokeCallback);
 
 // NASA Image of the Day
 const nasaImage = document.getElementById('nasa-image');
@@ -115,36 +76,12 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
 // Random Fact - Useless Facts API
 const factButton = document.getElementById('fact-button');
 const factText = document.getElementById('fact-text');
-factButton.addEventListener('click', () => {
-	fetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en')
-		.then(res => res.json())
-		.then(data => {
-			factText.textContent = data.text;
-		})
-		.catch(() => {
-			factText.textContent = "Couldn't fetch a fact.";
-		});
-});
+factButton.addEventListener('click', randomFactCallback);
 
 // Movie Quote - RapidAPI (replace API_KEY with your actual key)
 const movieQuoteButton = document.getElementById('movie-quote-button');
 const movieQuoteText = document.getElementById('movie-quote-text');
-movieQuoteButton.addEventListener('click', () => {
-	fetch('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/random/quote', {
-		headers: {
-			'X-RapidAPI-Key': RapidAPI_KEY,
-			'X-RapidAPI-Host': 'movie-and-tv-shows-quotes.p.rapidapi.com'
-		}
-	})
-		.then(res => res.json())
-		.then(data => {
-			const quote = data[0];
-			movieQuoteText.textContent = `"${quote.quote}" - ${quote.author}`;
-		})
-		.catch(() => {
-			movieQuoteText.textContent = "Failed to load movie quote.";
-		});
-});
+movieQuoteButton.addEventListener('click', movieQuoteCallback);
 
 function updateAnalogClock() {
 	const now = new Date();
@@ -190,3 +127,80 @@ buttons.forEach(button => {
 		}
 	});
 });
+
+function dogCallback() {
+	fetch('https://dog.ceo/api/breeds/image/random')
+		.then(response => response.json())
+		.then(data => {
+			petImage.src = data.message;
+		})
+		.catch(error => {
+			petImage.src = "";
+			alert("Failed to load dog image!");
+		});
+}
+
+function movieQuoteCallback() {
+	fetch('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/random/quote', {
+		headers: {
+			'X-RapidAPI-Key': RapidAPI_KEY,
+			'X-RapidAPI-Host': 'movie-and-tv-shows-quotes.p.rapidapi.com'
+		}
+	})
+		.then(res => res.json())
+		.then(data => {
+			const quote = data[0];
+			movieQuoteText.textContent = `"${quote.quote}" - ${quote.author}`;
+		})
+		.catch(() => {
+			movieQuoteText.textContent = "Failed to load movie quote.";
+		});
+}
+
+
+function randomFactCallback() {
+	fetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en')
+		.then(res => res.json())
+		.then(data => {
+			factText.textContent = data.text;
+		})
+		.catch(() => {
+			factText.textContent = "Couldn't fetch a fact.";
+		});
+}
+
+function randomJokeCallback() {
+	fetch('https://v2.jokeapi.dev/joke/Any')
+		.then(res => res.json())
+		.then(data => {
+			jokeText.textContent = data.type === "single"
+				? data.joke
+				: `${data.setup} ... ${data.delivery}`;
+		})
+		.catch(() => {
+			jokeText.textContent = "Failed to load a joke!";
+		});
+}
+
+function randomQuoteCallback() {
+	fetch('https://quotes85.p.rapidapi.com/getrandomquote',
+		{
+			headers: {
+				'X-RapidAPI-Key': RapidAPI_KEY,
+				'X-RapidAPI-Host': 'quotes85.p.rapidapi.com'
+			}
+		})
+		.then(res => res.text())
+		.then(data => {
+			quoteText.textContent = `"${data}"`;
+		})
+		.catch(error => {
+			quoteText.textContent = "Failed to load quote!";
+		});
+}
+
+dogCallback();
+// movieQuoteCallback();
+randomFactCallback();
+randomJokeCallback();
+randomQuoteCallback();
