@@ -1,3 +1,4 @@
+
 // Get Random Quote
 const quoteButton = document.getElementById('quote-button');
 const quoteText = document.getElementById('quote-text');
@@ -184,6 +185,12 @@ function randomJokeCallback() {
 }
 
 function randomQuoteCallback() {
+	const handleResponse = (data) => {
+		const quote = data || QUOTES[Math.floor(Math.random() * QUOTES.length)];
+		quoteText.textContent = `${quote.split(" - ")[0]}`;
+		quoteAuthor.textContent = `~${quote.split(" - ")[1]}`;
+	}
+
 	fetch('https://quotes85.p.rapidapi.com/getrandomquote',
 		{
 			headers: {
@@ -191,14 +198,9 @@ function randomQuoteCallback() {
 				'X-RapidAPI-Host': 'quotes85.p.rapidapi.com'
 			}
 		})
-		.then(res => res.text())
-		.then(data => {
-			quoteText.textContent = `${data.split(" - ")[0]}`;
-			quoteAuthor.textContent = `~${data.split(" - ")[1]}`;
-		})
-		.catch(error => {
-			quoteText.textContent = "Failed to load quote!";
-		});
+		.then(res => res.ok ? res.text() : null)
+		.then(data => handleResponse(data))
+		.catch(error => handleResponse(null));
 }
 
 dogCallback();
