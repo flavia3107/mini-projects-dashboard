@@ -60,20 +60,22 @@ const nasaImage = document.getElementById('nasa-image');
 const nasaTitle = document.getElementById('nasa-title');
 const nasaDescription = document.getElementById('nasa-description');
 
-fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
-	.then(res => res.json())
-	.then(data => {
-		if (data.media_type === "image") {
-			nasaImage.src = data.url;
-		} else {
-			nasaImage.style.display = 'none';
-		}
-		nasaTitle.textContent = data.title;
+function getNasaImage() {
+	const handleResponse = (data) => {
+		nasaImage.src = data && data.media_type === "image" ? data.url : '/assets/images/earth.webp';
+		nasaTitle.textContent = data.title || 'Failed to load';
 		nasaDescription.textContent = data.explanation;
-	})
-	.catch(() => {
-		nasaTitle.textContent = "Failed to load NASA image.";
-	});
+	}
+
+	fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API}`)
+		.then(res => res.ok ? res.json() : null)
+		.then(data => handleResponse(data))
+		.catch(() => {
+			nasaTitle.textContent = "Failed to load NASA image.";
+		});
+}
+
+
 
 // Random Fact - Useless Facts API
 const factButton = document.getElementById('fact-button');
@@ -159,7 +161,6 @@ function movieQuoteCallback() {
 		});
 }
 
-
 function randomFactCallback() {
 	const handleResponse = (data) => {
 		const quote = data.text || FUN_fACTS[Math.floor(Math.random() * FUN_fACTS.length)];
@@ -209,3 +210,4 @@ dogCallback();
 randomFactCallback();
 randomJokeCallback();
 randomQuoteCallback();
+getNasaImage();
