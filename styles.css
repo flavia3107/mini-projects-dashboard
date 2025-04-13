@@ -21,7 +21,7 @@ body {
 
 .widget {
 	background-color: white;
-	padding: 20px;
+	padding: 1rem;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	height: 100%;
@@ -157,7 +157,7 @@ input {
 }
 
 #pet-image {
-	height: 19rem;
+	height: 20rem;
 	width: 100%;
 	border-radius: 5px;
 	object-fit: cover;
@@ -266,6 +266,8 @@ input {
 
 ul {
 	list-style: none;
+	overflow: auto;
+	max-height: 18rem;
 }
 
 li.flex-row {
@@ -294,6 +296,11 @@ li.flex-row {
 
 .todo {
 	width: 32%;
+}
+
+#todo-widget {
+	max-height: 22.5rem;
+	overflow: hidden;
 }
 
 #nasa-title,
@@ -347,4 +354,26 @@ li.flex-row {
 	height: calc(100% - 1.9rem);
 	justify-content: space-between;
 	overflow: auto;
+}
+
+.fun-fact-widget {
+	background-color: #fafcff;
+	border: 1px dashed #c2d3e7;
+	border-radius: 1rem;
+	text-align: center;
+	font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+	transition: background-color 0.3s ease;
+}
+
+.fun-fact-widget p {
+	font-size: 1.1rem;
+	color: #444;
+	margin: 0.75rem 0 0;
+	transition: opacity 0.3s ease;
+	overflow: auto;
+	max-height: calc(100% - 1.5rem);
+}
+
+#fact-button {
+	cursor: pointer;
 }

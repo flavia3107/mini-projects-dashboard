@@ -161,14 +161,15 @@ function movieQuoteCallback() {
 
 
 function randomFactCallback() {
+	const handleResponse = (data) => {
+		const quote = data.text || FUN_fACTS[Math.floor(Math.random() * FUN_fACTS.length)];
+		factText.textContent = `${quote.split(" - ")[0]}`;
+	}
+
 	fetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en')
 		.then(res => res.json())
-		.then(data => {
-			factText.textContent = data.text;
-		})
-		.catch(() => {
-			factText.textContent = "Couldn't fetch a fact.";
-		});
+		.then(data => handleResponse(data))
+		.catch(() => handleResponse());
 }
 
 function randomJokeCallback() {
