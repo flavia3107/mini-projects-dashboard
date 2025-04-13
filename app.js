@@ -147,23 +147,24 @@ function dogCallback() {
 }
 
 function movieQuoteCallback() {
+	const handleResponse = (data) => {
+		const quote = data || MOVIE_QUOTES[Math.floor(Math.random() * MOVIE_QUOTES.length)];
+		console.log('MOVIE_QUOTES', data)
+		movieQuoteText.textContent = `"${quote.quote}"`;
+		movieActor.textContent = `(${quote.actor})`;
+		movieCharacter.textContent = quote.character;
+		movieMovieTitle.textContent = quote.quoteFrom;
+		movieReleaseYear.textContent = `(${quote.year})`;
+	}
 	fetch('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/random/quote', {
 		headers: {
 			'X-RapidAPI-Key': RapidAPI_KEY,
 			'X-RapidAPI-Host': 'movie-and-tv-shows-quotes.p.rapidapi.com'
 		}
 	})
-		.then(res => res.json())
-		.then(data => {
-			movieQuoteText.textContent = `"${data.quote}"`;
-			movieActor.textContent = `(${data.actor})`;
-			movieCharacter.textContent = data.character;
-			movieMovieTitle.textContent = data.quoteFrom;
-			movieReleaseYear.textContent = `(${data.year})`;
-		})
-		.catch(() => {
-			movieQuoteText.textContent = "Failed to load movie quote.";
-		});
+		.then(res => res.ok ? res.json() : null)
+		.then(data => handleResponse(data))
+		.catch(() => handleResponse());
 }
 
 function randomFactCallback() {
