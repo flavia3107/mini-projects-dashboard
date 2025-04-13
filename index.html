@@ -125,7 +125,6 @@
 					<img id="pet-image" src="" alt="Random Cat" />
 				</div>
 			</div>
-
 			<div class="flex-column">
 				<div class="widget" id="joke-widget">
 					<h2>Joke Teller</h2>
@@ -135,8 +134,18 @@
 			</div>
 			<div class="widget" id="movie-quote-widget">
 				<h2>Movie Quote</h2>
-				<p id="movie-quote-text">Click the button for a movie quote.</p>
-				<button id="movie-quote-button">Get Movie Quote</button>
+				<div class="flex-column space_between movie-quote-container">
+					<p id="movie-quote-text" class="quote"></p>
+					<p class="meta">
+						— <strong id="character" class="character"></strong>
+						<span id="actor" class="actor"></span>
+						<br>
+						<span id="movie-title" class="movie-title"></span>
+						<br>
+						<span id="release-year" class="year"></span>
+					</p>
+				</div>
+				<span id="movie-quote-button" class="refresh-btn"> 🎬</span>
 			</div>
 			<div class="widget" id="bmi-widget">
 				<h2>BMI Check</h2>

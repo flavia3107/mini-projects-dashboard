@@ -434,3 +434,67 @@ li.flex-row {
 #cat-widget {
 	width: 25rem;
 }
+
+#movie-quote-widget {
+	background-color: #fff;
+	color: #333;
+	padding: 1.5rem;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	max-width: 500px;
+	font-family: "Georgia", serif;
+	position: relative;
+}
+
+.quote {
+	font-style: italic;
+	font-size: 1.2rem;
+	margin-bottom: 2srem;
+	line-height: 1.4;
+	position: relative;
+	color: #878787;
+}
+
+.meta {
+	font-size: 0.95rem;
+	color: #666;
+	text-align: end;
+}
+
+.character {
+	font-weight: bold;
+	color: #444;
+}
+
+.actor {
+	font-style: italic;
+	color: #777;
+}
+
+.movie-title {
+	font-weight: 500;
+}
+
+.year {
+	color: #999;
+}
+
+.refresh-btn {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	font-size: 1.4rem;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.refresh-btn:hover {
+	transform: rotate(20deg);
+}
+
+.movie-quote-container {
+	width: 100% !important;
+	height: calc(100% - 4.5rem) !important;
+}

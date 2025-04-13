@@ -83,6 +83,10 @@ factButton.addEventListener('click', randomFactCallback);
 // Movie Quote - RapidAPI (replace API_KEY with your actual key)
 const movieQuoteButton = document.getElementById('movie-quote-button');
 const movieQuoteText = document.getElementById('movie-quote-text');
+const movieActor = document.getElementById('actor');
+const movieCharacter = document.getElementById('character');
+const movieMovieTitle = document.getElementById('movie-title');
+const movieReleaseYear = document.getElementById('release-year');
 movieQuoteButton.addEventListener('click', movieQuoteCallback);
 
 function updateAnalogClock() {
@@ -151,8 +155,11 @@ function movieQuoteCallback() {
 	})
 		.then(res => res.json())
 		.then(data => {
-			const quote = data[0];
-			movieQuoteText.textContent = `"${quote.quote}" - ${quote.author}`;
+			movieQuoteText.textContent = `"${data.quote}"`;
+			movieActor.textContent = `(${data.actor})`;
+			movieCharacter.textContent = data.character;
+			movieMovieTitle.textContent = data.quoteFrom;
+			movieReleaseYear.textContent = `(${data.year})`;
 		})
 		.catch(() => {
 			movieQuoteText.textContent = "Failed to load movie quote.";
@@ -204,7 +211,7 @@ function randomQuoteCallback() {
 }
 
 dogCallback();
-// movieQuoteCallback();
+movieQuoteCallback();
 // randomFactCallback();
 randomJokeCallback();
 // randomQuoteCallback();
