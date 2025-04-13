@@ -1,6 +1,7 @@
 // Get Random Quote
 const quoteButton = document.getElementById('quote-button');
 const quoteText = document.getElementById('quote-text');
+const quoteAuthor = document.getElementById('quote-author');
 quoteButton.addEventListener('click', randomQuoteCallback);
 
 // Get Todo List (using JSONPlaceholder API)
@@ -192,7 +193,8 @@ function randomQuoteCallback() {
 		})
 		.then(res => res.text())
 		.then(data => {
-			quoteText.textContent = `"${data}"`;
+			quoteText.textContent = `${data.split(" - ")[0]}`;
+			quoteAuthor.textContent = `~${data.split(" - ")[1]}`;
 		})
 		.catch(error => {
 			quoteText.textContent = "Failed to load quote!";

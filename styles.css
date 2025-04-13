@@ -296,16 +296,55 @@ li.flex-row {
 	width: 32%;
 }
 
-#nasa-title {
-	margin-bottom: 0.5rem;
+#nasa-title,
+.no-margin {
+	margin-bottom: 0.5rem !important;
 }
 
 #dog-button,
-#cat-button {
+#cat-button,
+#quote-button {
 	cursor: pointer;
 }
 
 .pet-title {
 	display: flex;
 	justify-content: space-between;
+}
+
+#quote-text {
+	font-size: 1.2rem;
+	font-style: italic;
+	color: #525252;
+	display: inline;
+}
+
+.quote-open,
+.quote-close {
+	font-size: 1.8rem;
+	color: #000000;
+	line-height: 1;
+	position: relative;
+	top: 2px;
+	font-style: italic;
+	opacity: 0.5;
+}
+
+.quote-close {
+	vertical-align: bottom;
+}
+
+#quote-author {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #767676;
+	text-align: end;
+}
+
+.quote-widget {
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 1.9rem);
+	justify-content: space-between;
+	overflow: auto;
 }
