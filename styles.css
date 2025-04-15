@@ -29,7 +29,7 @@ body {
 
 #nasa-widget {
 	height: 30.5rem;
-	width: 100%;
+	width: 71%;
 }
 
 #nasa-image {
@@ -42,8 +42,9 @@ body {
 .analog-clock-widget {
 	display: flex;
 	flex-direction: column;
-	width: 24%;
+	width: 23.5%;
 	height: 22.5rem;
+	min-width: fit-content;
 }
 
 .clock {
@@ -137,7 +138,7 @@ h2 {
 }
 
 button {
-	background-color: #4caf50;
+	background-color: #f9f9f9;
 	color: white;
 	border: none;
 	padding: 10px 20px;
@@ -146,7 +147,7 @@ button {
 }
 
 button:hover {
-	background-color: #45a049;
+	background-color: #f9f9f9;
 }
 
 input {
@@ -249,11 +250,10 @@ input {
 .clear:hover {
 	background-color: #f27c7c;
 }
-
 .cat {
-	width: 30%;
+	max-width: 25rem;
+	width: 26%;
 }
-
 .second-row {
 	height: 30.5rem;
 }
@@ -264,7 +264,6 @@ input {
 }
 
 .third-row .flex-column {
-	width: 33%;
 	height: 25rem;
 }
 
@@ -274,13 +273,9 @@ input {
 }
 
 #bmi-widget {
-	width: 31rem;
+	max-width: 23rem;
+	width: 26%;
 }
-
-#movie-quote-widget {
-	width: 35rem;
-}
-
 .quotes {
 	width: 41%;
 	gap: 1.5rem;
@@ -431,19 +426,16 @@ li.flex-row {
 	transition: transform 0.2s ease;
 }
 
-#cat-widget {
-	width: 25rem;
-}
-
 #movie-quote-widget {
 	background-color: #fff;
 	color: #333;
-	padding: 1.5rem;
+	padding: 1rem;
 	border-radius: 12px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-	max-width: 500px;
+	max-width: 22rem;
 	font-family: "Georgia", serif;
 	position: relative;
+	width: 23%;
 }
 
 .quote {
@@ -552,4 +544,15 @@ li.flex-row {
 
 .highcharts-description {
 	margin: 0.3rem 10px;
+}
+
+.third-row,
+.second-row,
+.first-row {
+	flex-wrap: wrap;
+	min-height: fit-content;
+}
+
+.joke {
+	width: 18rem;
 }
