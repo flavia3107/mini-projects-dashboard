@@ -29,7 +29,11 @@ body {
 
 #nasa-widget {
 	height: 30.5rem;
-	width: 71%;
+	width: 100%;
+}
+
+#calculator-widget {
+	height: 30.5rem;
 }
 
 #nasa-image {
@@ -42,7 +46,6 @@ body {
 .analog-clock-widget {
 	display: flex;
 	flex-direction: column;
-	width: 23.5%;
 	height: 22.5rem;
 	min-width: fit-content;
 }
@@ -139,15 +142,15 @@ h2 {
 
 button {
 	background-color: #f9f9f9;
-	color: white;
 	border: none;
 	padding: 10px 20px;
 	cursor: pointer;
 	border-radius: 5px;
 }
 
-button:hover {
-	background-color: #f9f9f9;
+button:hover,
+.custom-btn:hover {
+	background-color: #e7e5e5;
 }
 
 input {
@@ -252,7 +255,7 @@ input {
 }
 .cat {
 	max-width: 25rem;
-	width: 26%;
+	width: 34%;
 }
 .second-row {
 	height: 30.5rem;
@@ -272,12 +275,13 @@ input {
 	height: 25rem;
 }
 
-#bmi-widget {
-	max-width: 23rem;
-	width: 26%;
+#bmi-result {
+	text-align: center;
+	color: #adadad;
 }
+
 .quotes {
-	width: 41%;
+	width: 57.5%;
 	gap: 1.5rem;
 }
 
@@ -316,7 +320,7 @@ li.flex-row {
 }
 
 .todo {
-	width: 32%;
+	width: 40%;
 }
 
 #todo-widget {
@@ -435,7 +439,7 @@ li.flex-row {
 	max-width: 22rem;
 	font-family: "Georgia", serif;
 	position: relative;
-	width: 23%;
+	width: 32%;
 }
 
 .quote {
@@ -555,4 +559,19 @@ li.flex-row {
 
 .joke {
 	width: 18rem;
+}
+
+.custom-btn {
+	background: #f9f9f9;
+	padding: 0.6rem 0.6rem 0;
+	border-radius: 5px;
+}
+
+.first-col {
+	width: 70%;
+}
+
+.second-col {
+	width: 27%;
+	gap: 1.5rem;
 }
