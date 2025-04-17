@@ -317,9 +317,9 @@ function updateChart(bmiResult) {
 
 }
 
-// dogCallback();
-// movieQuoteCallback();
-// randomFactCallback();
-// randomJokeCallback();
-// randomQuoteCallback();
-// getNasaImage();
+dogCallback();
+movieQuoteCallback();
+randomFactCallback();
+randomJokeCallback();
+randomQuoteCallback();
+getNasaImage();
