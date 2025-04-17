@@ -16,7 +16,6 @@ body {
 .dashboard {
 	max-width: 90rem;
 	width: 100%;
-	/* margin: 1.5rem auto 0; */
 	padding: 0 2rem;
 	justify-items: center;
 }
@@ -381,7 +380,7 @@ li.flex-row {
 .quote-widget {
 	display: flex;
 	flex-direction: column;
-	height: calc(100% - 1.9rem);
+	height: calc(100% - 2.5rem);
 	justify-content: space-between;
 	overflow: auto;
 }
@@ -624,8 +623,6 @@ li.flex-row {
 	.joke,
 	.cat,
 	#movie-quote-widget {
-		/* width: 32.5%; */
-		/* height: 100%; */
 		width: 100%;
 		max-width: 100%;
 	}

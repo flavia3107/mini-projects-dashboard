@@ -68,7 +68,7 @@ function getNasaImage() {
 		nasaDescription.textContent = data.explanation;
 	}
 
-	fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API}`)
+	fetch(`https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_NASA_API}`)
 		.then(res => res.ok ? res.json() : null)
 		.then(data => handleResponse(data))
 		.catch(() => {
@@ -159,7 +159,7 @@ function movieQuoteCallback() {
 	}
 	fetch('https://movie-and-tv-shows-quotes.p.rapidapi.com/quotes/random/quote', {
 		headers: {
-			'X-RapidAPI-Key': RapidAPI_KEY,
+			'X-RapidAPI-Key': import.meta.env.VITE_RapidAPI_KEY,
 			'X-RapidAPI-Host': 'movie-and-tv-shows-quotes.p.rapidapi.com'
 		}
 	})
@@ -203,7 +203,7 @@ function randomQuoteCallback() {
 	fetch('https://quotes85.p.rapidapi.com/getrandomquote',
 		{
 			headers: {
-				'X-RapidAPI-Key': RapidAPI_KEY,
+				'X-RapidAPI-Key': import.meta.env.VITE_RapidAPI_KEY,
 				'X-RapidAPI-Host': 'quotes85.p.rapidapi.com'
 			}
 		})
@@ -317,9 +317,9 @@ function updateChart(bmiResult) {
 
 }
 
-dogCallback();
-movieQuoteCallback();
-randomFactCallback();
-randomJokeCallback();
-randomQuoteCallback();
-getNasaImage();
+// dogCallback();
+// movieQuoteCallback();
+// randomFactCallback();
+// randomJokeCallback();
+// randomQuoteCallback();
+// getNasaImage();
