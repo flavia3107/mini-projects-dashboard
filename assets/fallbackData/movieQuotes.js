@@ -1,4 +1,4 @@
-const MOVIE_QUOTES = [
+export const MOVIE_QUOTES = [
 	{
 		"quote": "Frankly, my dear, I don't give a damn.",
 		"actor": "Clark Gable",

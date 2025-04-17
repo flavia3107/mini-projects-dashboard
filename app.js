@@ -1,3 +1,6 @@
+import { MOVIE_QUOTES } from './assets/fallbackData/movieQuotes.js';
+import { FUN_fACTS } from './assets/fallbackData/funFact.js';
+import { QUOTES } from './assets/fallbackData/quotes.js';
 
 // Get Random Quote
 const quoteButton = document.getElementById('quote-button');
@@ -150,7 +153,6 @@ function dogCallback() {
 function movieQuoteCallback() {
 	const handleResponse = (data) => {
 		const quote = data || MOVIE_QUOTES[Math.floor(Math.random() * MOVIE_QUOTES.length)];
-		console.log('MOVIE_QUOTES', data)
 		movieQuoteText.textContent = `"${quote.quote}"`;
 		movieActor.textContent = `(${quote.actor})`;
 		movieCharacter.textContent = quote.character;

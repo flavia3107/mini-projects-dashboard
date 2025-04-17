@@ -1,4 +1,4 @@
-const FUN_fACTS = [
+export const FUN_fACTS = [
 	"Honey never spoils. Archaeologists have found pots of honey in ancient tombs that are over 3,000 years old!",
 	"Bananas are berries, but strawberries aren’t.",
 	"Octopuses have three hearts and blue blood.",
