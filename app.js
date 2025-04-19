@@ -1,18 +1,9 @@
 import { MOVIE_QUOTES } from './assets/fallbackData/movieQuotes.js';
 import { FUN_fACTS } from './assets/fallbackData/funFact.js';
 import { getRandomQuote } from './scripts/quote-widget.js';
+import { getToDoItems } from './scripts/todo-widget.js';
 
 
-// Get Todo List (using JSONPlaceholder API)
-const todoList = document.getElementById('todo-list');
-fetch('https://jsonplaceholder.typicode.com/todos')
-	.then(response => response.json())
-	.then(data => {
-		todoList.innerHTML = data.sort(() => Math.random() - 0.5).slice(0, 5).map(todo => `<li class="flex-row"><span>${todo.completed ? '\u{1F7E9}' : '\u2B1C'}</span> <span>${todo.title}</span></li>`).join('');
-	})
-	.catch(error => {
-		todoList.innerHTML = "<li>Failed to load todo list.</li>";
-	});
 
 // BMI Calculator functionality
 const bmiForm = document.getElementById('bmi-form');
@@ -302,3 +293,4 @@ randomFactCallback();
 randomJokeCallback();
 getRandomQuote();
 getNasaImage();
+getToDoItems();
