@@ -1,22 +1,13 @@
 import { MOVIE_QUOTES } from './assets/fallbackData/movieQuotes.js';
-import { FUN_fACTS } from './assets/fallbackData/funFact.js';
 import { getRandomQuote } from './scripts/quote-widget.js';
 import { getToDoItems } from './scripts/todo-widget.js';
 import { bmiCalculator } from './scripts/bmi-calculator-widget.js';
 import { getRandomPetImage } from './scripts/pet-image-widget.js';
 import { getRandomJoke } from './scripts/joke-widget.js';
 import { getNasaImage } from './scripts/nasa-widget.js';
+import { getRandomFact } from './scripts/fact-widget.js';
 
 
-
-
-
-
-
-// Random Fact - Useless Facts API
-const factButton = document.getElementById('fact-button');
-const factText = document.getElementById('fact-text');
-factButton.addEventListener('click', randomFactCallback);
 
 // Movie Quote - RapidAPI (replace API_KEY with your actual key)
 const movieQuoteButton = document.getElementById('movie-quote-button');
@@ -93,23 +84,11 @@ function movieQuoteCallback() {
 		.catch(() => handleResponse());
 }
 
-function randomFactCallback() {
-	const handleResponse = (data) => {
-		const quote = data.text || FUN_fACTS[Math.floor(Math.random() * FUN_fACTS.length)];
-		factText.textContent = `${quote.split(" - ")[0]}`;
-	}
-
-	fetch('https://uselessfacts.jsph.pl/api/v2/facts/random?language=en')
-		.then(res => res.json())
-		.then(data => handleResponse(data))
-		.catch(() => handleResponse());
-}
-
 
 
 getRandomPetImage();
 movieQuoteCallback();
-randomFactCallback();
+getRandomFact();
 getRandomJoke();
 getRandomQuote();
 getNasaImage();
