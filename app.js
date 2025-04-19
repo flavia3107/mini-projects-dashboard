@@ -3,28 +3,11 @@ import { FUN_fACTS } from './assets/fallbackData/funFact.js';
 import { getRandomQuote } from './scripts/quote-widget.js';
 import { getToDoItems } from './scripts/todo-widget.js';
 import { bmiCalculator } from './scripts/bmi-calculator-widget.js';
+import { getRandomPetImage } from './scripts/pet-image-widget.js';
 
 
 
 
-// Get Random Cat Image
-const catButton = document.getElementById('cat-button');
-const petImage = document.getElementById('pet-image');
-catButton.addEventListener('click', () => {
-	fetch('https://api.thecatapi.com/v1/images/search')
-		.then(response => response.json())
-		.then(data => {
-			petImage.src = data[0].url;
-		})
-		.catch(error => {
-			petImage.src = "";
-			alert("Failed to load cat image!");
-		});
-});
-
-// Get Random Dog Image
-const dogButton = document.getElementById('dog-button');
-dogButton.addEventListener('click', dogCallback);
 
 // Get Random Joke
 const jokeButton = document.getElementById('joke-button');
@@ -110,17 +93,6 @@ buttons.forEach(button => {
 	});
 });
 
-function dogCallback() {
-	fetch('https://dog.ceo/api/breeds/image/random')
-		.then(response => response.json())
-		.then(data => {
-			petImage.src = data.message;
-		})
-		.catch(error => {
-			petImage.src = "";
-			alert("Failed to load dog image!");
-		});
-}
 
 function movieQuoteCallback() {
 	const handleResponse = (data) => {
@@ -169,7 +141,7 @@ function randomJokeCallback() {
 
 
 
-dogCallback();
+getRandomPetImage();
 movieQuoteCallback();
 randomFactCallback();
 randomJokeCallback();
