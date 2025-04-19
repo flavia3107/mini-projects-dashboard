@@ -1,12 +1,7 @@
 import { MOVIE_QUOTES } from './assets/fallbackData/movieQuotes.js';
 import { FUN_fACTS } from './assets/fallbackData/funFact.js';
-import { QUOTES } from './assets/fallbackData/quotes.js';
+import { getRandomQuote } from './scripts/quote-widget.js';
 
-// Get Random Quote
-const quoteButton = document.getElementById('quote-button');
-const quoteText = document.getElementById('quote-text');
-const quoteAuthor = document.getElementById('quote-author');
-quoteButton.addEventListener('click', randomQuoteCallback);
 
 // Get Todo List (using JSONPlaceholder API)
 const todoList = document.getElementById('todo-list');
@@ -195,24 +190,6 @@ function randomJokeCallback() {
 		});
 }
 
-function randomQuoteCallback() {
-	const handleResponse = (data) => {
-		const quote = data || QUOTES[Math.floor(Math.random() * QUOTES.length)];
-		quoteText.textContent = `${quote.split(" - ")[0]}`;
-		quoteAuthor.textContent = `~${quote.split(" - ")[1]}`;
-	}
-
-	fetch('https://quotes85.p.rapidapi.com/getrandomquote',
-		{
-			headers: {
-				'X-RapidAPI-Key': import.meta.env.VITE_RapidAPI_KEY,
-				'X-RapidAPI-Host': 'quotes85.p.rapidapi.com'
-			}
-		})
-		.then(res => res.ok ? res.text() : null)
-		.then(data => handleResponse(data))
-		.catch(error => handleResponse(null));
-}
 
 function updateChart(bmiResult) {
 	let bmiCategory;
@@ -323,5 +300,5 @@ dogCallback();
 movieQuoteCallback();
 randomFactCallback();
 randomJokeCallback();
-randomQuoteCallback();
+getRandomQuote();
 getNasaImage();
