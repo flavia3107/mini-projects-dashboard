@@ -168,7 +168,6 @@ input {
 .calculator {
 	padding: 1rem;
 	border-radius: 10px;
-	border: 1px solid #d3d3d3;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	min-width: fit-content;
 }
@@ -199,20 +198,17 @@ input {
 	border-radius: 6px;
 	cursor: pointer;
 	transition: background-color 0.2s;
-	color: #4e4e4e;
-	box-shadow: 0 0px 2px rgb(0 0 0 / 56%);
 }
 
 .btn:hover {
-	box-shadow: inset 0 2px 4px rgb(0 0 0 / 35%);
 	background-color: transparent;
 }
 
 .op {
 	background-color: #ffb963;
-	color: #fff;
 	box-shadow: 0 0px 2px #d9994a;
 }
+
 .op:hover {
 	background-color: #ffb963;
 }
@@ -230,17 +226,18 @@ input {
 .clear {
 	grid-column: span 4;
 	background-color: #f27c7c;
-	color: white;
 	box-shadow: 0 0px 2px #f27c7c;
 }
 
 .clear:hover {
 	background-color: #f27c7c;
 }
+
 .cat {
 	max-width: 25rem;
 	width: 34%;
 }
+
 .second-row {
 	height: 30.5rem;
 }
@@ -335,14 +332,12 @@ li.flex-row {
 #quote-text {
 	font-size: 1.2rem;
 	font-style: italic;
-	color: #525252;
 	display: inline;
 }
 
 .quote-open,
 .quote-close {
 	font-size: 1.8rem;
-	color: #000000;
 	line-height: 1;
 	position: relative;
 	top: 2px;
@@ -370,7 +365,6 @@ li.flex-row {
 }
 
 .fun-fact-widget {
-	background-color: #fafcff !important;
 	border: 2px solid #c2d3e7;
 	border-radius: 1rem;
 	text-align: center;
@@ -392,8 +386,6 @@ li.flex-row {
 }
 
 #joke-widget {
-	background-color: #fffbf6;
-	border: 2px solid #ffe0b2;
 	border-radius: 12px;
 	padding: 20px;
 	font-family: "Segoe UI", sans-serif;
@@ -420,7 +412,6 @@ li.flex-row {
 #movie-quote-widget {
 	padding: 1rem;
 	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 	max-width: 22rem;
 	font-family: "Georgia", serif;
 	position: relative;
@@ -444,7 +435,7 @@ li.flex-row {
 
 .character {
 	font-weight: bold;
-	color: #444;
+	color: #666;
 }
 
 .actor {
@@ -492,42 +483,6 @@ li.flex-row {
 
 #container {
 	height: 15.5rem;
-}
-
-.highcharts-data-table table {
-	font-family: Verdana, sans-serif;
-	border-collapse: collapse;
-	border: 1px solid #ebebeb;
-	margin: 10px auto;
-	text-align: center;
-	width: 100%;
-	max-width: 500px;
-}
-
-.highcharts-data-table caption {
-	padding: 1em 0;
-	font-size: 1.2em;
-	color: #555;
-}
-
-.highcharts-data-table th {
-	font-weight: 600;
-	padding: 0.5em;
-}
-
-.highcharts-data-table td,
-.highcharts-data-table th,
-.highcharts-data-table caption {
-	padding: 0.5em;
-}
-
-.highcharts-data-table thead tr,
-.highcharts-data-table tbody tr:nth-child(even) {
-	background: #f8f8f8;
-}
-
-.highcharts-data-table tr:hover {
-	background: #f1f7ff;
 }
 
 .highcharts-description {

@@ -33,7 +33,8 @@ function updateChart(bmiResult) {
 		chart: {
 			plotBackgroundColor: null,
 			plotBorderWidth: 0,
-			plotShadow: false
+			plotShadow: false,
+			backgroundColor: 'transparent'
 		},
 		title: {
 			text: '',
@@ -60,7 +61,8 @@ function updateChart(bmiResult) {
 				startAngle: -90,
 				endAngle: 90,
 				center: ['50%', '75%'],
-				size: '110%'
+				size: '110%',
+				borderColor: 'transparent'
 			}
 		},
 		series: [{
