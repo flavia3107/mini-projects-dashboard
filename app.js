@@ -4,15 +4,13 @@ import { getRandomQuote } from './scripts/quote-widget.js';
 import { getToDoItems } from './scripts/todo-widget.js';
 import { bmiCalculator } from './scripts/bmi-calculator-widget.js';
 import { getRandomPetImage } from './scripts/pet-image-widget.js';
+import { getRandomJoke } from './scripts/joke-widget.js';
 
 
 
 
 
-// Get Random Joke
-const jokeButton = document.getElementById('joke-button');
-const jokeText = document.getElementById('joke-text');
-jokeButton.addEventListener('click', randomJokeCallback);
+
 
 // NASA Image of the Day
 const nasaImage = document.getElementById('nasa-image');
@@ -126,25 +124,12 @@ function randomFactCallback() {
 		.catch(() => handleResponse());
 }
 
-function randomJokeCallback() {
-	fetch('https://v2.jokeapi.dev/joke/Any')
-		.then(res => res.json())
-		.then(data => {
-			jokeText.textContent = data.type === "single"
-				? data.joke
-				: `${data.setup} ... ${data.delivery}`;
-		})
-		.catch(() => {
-			jokeText.textContent = "Failed to load a joke!";
-		});
-}
-
 
 
 getRandomPetImage();
 movieQuoteCallback();
 randomFactCallback();
-randomJokeCallback();
+getRandomJoke();
 getRandomQuote();
 getNasaImage();
 getToDoItems();
