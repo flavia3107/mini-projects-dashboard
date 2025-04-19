@@ -8,7 +8,7 @@ import { getRandomFact } from './scripts/fact-widget.js';
 import { getMovieQuote } from './scripts/movie-quote-widget.js';
 import { updateAnalogClock } from './scripts/clock-widget.js';
 import { setCalculator } from './scripts/calculator-widget.js';
-
+import { setTheme } from './scripts/theme.js';
 
 setInterval(updateAnalogClock, 1000);
 updateAnalogClock();
@@ -21,3 +21,4 @@ getNasaImage();
 getToDoItems();
 bmiCalculator();
 setCalculator();
+setTheme();

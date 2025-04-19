@@ -1,0 +1,94 @@
+/* =====================
+   Base Theme Variables
+   ===================== */
+
+:root {
+	--bg-color: #ffffff;
+	--text-color: #000000;
+	--card-bg: #f0f0f0;
+	--accent-color: #007bff;
+}
+
+/* =====================
+   General Styles
+   ===================== */
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: system-ui, sans-serif;
+	margin: 0;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.widget {
+	background-color: var(--card-bg);
+	padding: 1rem;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =====================
+   Theme: Light (Default)
+   ===================== */
+
+.theme-light {
+	--bg-color: #ffffff;
+	--text-color: #1a1a1a;
+	--card-bg: #f7f7f7;
+	--accent-color: #0066ff;
+}
+
+/* =====================
+   Theme: Dark
+   ===================== */
+
+.theme-dark {
+	--bg-color: #121212;
+	--text-color: #e0e0e0;
+	--card-bg: #1f1f1f;
+	--accent-color: #bb86fc;
+}
+
+/* =====================
+   Theme: Forest
+   ===================== */
+
+.theme-forest {
+	--bg-color: #e8f5e9;
+	--text-color: #2e7d32;
+	--card-bg: #c8e6c9;
+	--accent-color: #43a047;
+}
+
+/* =====================
+   Theme Toggle Buttons
+   ===================== */
+
+#theme-toggle {
+	display: flex;
+	gap: 0.5rem;
+	padding: 1rem;
+	justify-content: center;
+}
+
+#theme-toggle button {
+	font-size: 1.5rem;
+	background: none;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	padding: 0.5rem;
+	cursor: pointer;
+	transition: transform 0.2s ease, border-color 0.2s ease;
+	color: var(--text-color);
+}
+
+#theme-toggle button:hover {
+	transform: scale(1.1);
+	border-color: var(--accent-color);
+}
+
+#theme-toggle button.active {
+	border-color: var(--accent-color);
+}
