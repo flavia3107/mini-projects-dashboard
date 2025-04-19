@@ -1,76 +1,58 @@
-/* =====================
-   Base Theme Variables
-   ===================== */
-
 :root {
-	--bg-color: #ffffff;
-	--text-color: #000000;
-	--card-bg: #f0f0f0;
+	--bg-color: #f7f7f7;
+	--text-color: #333;
+	--card-bg: white;
 	--accent-color: #007bff;
+	--clock-hands: #383838;
+	--clock-shadow: #0000001f;
+	--title-color: #525252;
+	--btn-background: #f9f9f9;
+	--btn-hover: #e7e5e5;
+	/* --light-blue: ; */
 }
-
-/* =====================
-   General Styles
-   ===================== */
 
 body {
 	background-color: var(--bg-color);
 	color: var(--text-color);
-	font-family: system-ui, sans-serif;
+	font-family: Arial, sans-serif;
 	margin: 0;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .widget {
 	background-color: var(--card-bg);
-	padding: 1rem;
-	border-radius: 10px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-	transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* =====================
-   Theme: Light (Default)
-   ===================== */
 
 .theme-light {
-	--bg-color: #ffffff;
-	--text-color: #1a1a1a;
-	--card-bg: #f7f7f7;
+	--bg-color: #f7f7f7;
+	--text-color: #333;
+	--card-bg: white;
 	--accent-color: #0066ff;
+	--clock-hands: #383838;
+	--clock-shadow: #0000001f;
+	--title-color: #525252;
+	--btn-background: #f9f9f9;
+	--btn-hover: #e7e5e5;
 }
-
-/* =====================
-   Theme: Dark
-   ===================== */
 
 .theme-dark {
 	--bg-color: #121212;
 	--text-color: #e0e0e0;
 	--card-bg: #1f1f1f;
 	--accent-color: #bb86fc;
+	--clock-hands: #e5e5e5;
+	--clock-shadow: #ffffff54;
+	--title-color: #e1e1e1;
+	--btn-background: #404040;
+	--btn-hover: #545454;
 }
-
-/* =====================
-   Theme: Forest
-   ===================== */
-
-.theme-forest {
-	--bg-color: #e8f5e9;
-	--text-color: #2e7d32;
-	--card-bg: #c8e6c9;
-	--accent-color: #43a047;
-}
-
-/* =====================
-   Theme Toggle Buttons
-   ===================== */
 
 #theme-toggle {
 	display: flex;
 	gap: 0.5rem;
-	padding: 1rem;
 	justify-content: center;
+	margin: 0.5rem;
 }
 
 #theme-toggle button {
@@ -91,4 +73,32 @@ body {
 
 #theme-toggle button.active {
 	border-color: var(--accent-color);
+}
+
+.clock {
+	box-shadow: 0 0 15px var(--clock-shadow);
+}
+
+.hour,
+.minute,
+.center-dot {
+	background-color: var(--clock-hands);
+}
+
+.number {
+	color: var(--clock-hands);
+}
+
+h2 {
+	color: var(--title-color);
+}
+
+button,
+.custom-btn {
+	background-color: var(--btn-background);
+}
+
+button:hover,
+.custom-btn:hover {
+	background-color: var(--btn-hover);
 }
