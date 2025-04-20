@@ -1,4 +1,4 @@
-import { QUOTES } from '../assets/fallbackData/quotes.js';
+import { QUOTES } from '../fallbackData/quotes.js';
 
 // Get Random Quote
 export function getRandomQuote() {

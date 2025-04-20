@@ -1,4 +1,4 @@
-import { MOVIE_QUOTES } from '../assets/fallbackData/movieQuotes.js';
+import { MOVIE_QUOTES } from '../fallbackData/movieQuotes.js';
 
 export function getMovieQuote() {
 	const movieQuoteButton = document.getElementById('movie-quote-button');

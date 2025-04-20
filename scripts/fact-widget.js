@@ -1,5 +1,5 @@
 // Random Fact - Useless Facts API
-import { FUN_fACTS } from '../assets/fallbackData/funFact.js';
+import { FUN_fACTS } from '../fallbackData/funFact.js';
 
 export function getRandomFact() {
 	const factButton = document.getElementById('fact-button');

@@ -19,11 +19,11 @@ export function setTheme() {
 		if (theme === 'light') {
 			icon.className = 'fas fa-moon';
 			toggleButton.setAttribute('title', 'Switch to Dark Mode');
-			img.src = './assets/images/logo.svg';
+			img.src = 'images/logo.svg';
 		} else {
 			icon.className = 'fas fa-sun';
 			toggleButton.setAttribute('title', 'Switch to Light Mode');
-			img.src = './assets/images/logo-white.svg';
+			img.src = 'images/logo-white.svg';
 		}
 	}
 }
