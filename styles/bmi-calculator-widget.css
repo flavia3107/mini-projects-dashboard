@@ -1,0 +1,19 @@
+#bmi-widget {
+	height: 25rem;
+}
+
+#bmi-result {
+	text-align: center;
+	color: #adadad;
+}
+
+.highcharts-figure {
+	min-width: 320px;
+	max-width: 500px;
+	margin: 1em auto;
+	padding: 0;
+}
+
+.highcharts-description {
+	margin: 0.3rem 10px;
+}
