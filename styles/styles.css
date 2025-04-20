@@ -122,12 +122,12 @@
 	transform: translateY(-50%);
 }
 
-h2 {
+h3 {
 	text-align: start;
 	letter-spacing: 1px;
 	font-weight: 400;
 	font-family: sans-serif;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 button {
@@ -384,7 +384,7 @@ li.flex-row {
 
 #joke-widget {
 	border-radius: 12px;
-	padding: 20px;
+	padding: 1rem;
 	font-family: "Segoe UI", sans-serif;
 	color: #4e342e;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -502,7 +502,7 @@ li.flex-row {
 	border-radius: 5px;
 }
 .art-container {
-	width: 49%;
+	width: 35%;
 	height: 40rem;
 }
 
@@ -513,18 +513,28 @@ li.flex-row {
 #art-of-the-day img {
 	width: 100%;
 	height: 80%;
+	max-height: 31rem;
 	object-fit: cover;
+	object-position: top;
 	border-radius: 8px;
 	margin-top: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#art-of-the-day p,
-#art-of-the-day small {
-	margin: 6px 0;
-	color: var(--text-color);
-	font-size: 0.9rem;
-	text-align: center;
+#art-title {
+	font-size: 1rem;
+	color: var(--title-color);
+}
+
+#art-artist {
+	font-weight: 600;
+	color: #8b8b8b;
+	font-size: 0.85rem;
+}
+
+#art-of-the-day p {
+	text-align: end;
+	width: 100%;
 }
 
 .first-col {
@@ -532,9 +542,17 @@ li.flex-row {
 	gap: 1.5rem;
 }
 
+.art-details {
+	gap: 0.5rem;
+}
+
 .second-col {
 	width: 27%;
 	gap: 1.5rem;
+}
+
+.art-img {
+	height: 95%;
 }
 
 @media screen and (max-width: 1026px) {

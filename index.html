@@ -38,7 +38,7 @@
 				<div class="flex-row first-row">
 					<div class="flex-column todo">
 						<div class="widget" id="todo-widget">
-							<h2>Tasks</h2>
+							<h3>Tasks</h3>
 							<ul id="todo-list">
 								<li>Loading...</li>
 							</ul>
@@ -47,9 +47,9 @@
 					<div class="flex-column quotes">
 						<div class="flex-column">
 							<div class="widget" id="quote-widget">
-								<h2 class="flex-row space_between no-margin">Words of Wisdom <span id="quote-button"
+								<h3 class="flex-row space_between no-margin">Words of Wisdom <span id="quote-button"
 										class="custom-btn">❝ ❞</span>
-								</h2>
+								</h3>
 								<div class="quote-widget">
 									<div class="quote-text">
 										<span class="quote-open">“</span>
@@ -62,9 +62,9 @@
 						</div>
 						<div class="flex-column">
 							<div class="widget fun-fact-widget flex-column space_between" id="fact-widget">
-								<h2 class="flex-row space_between no-margin">Fun Facts
+								<h3 class="flex-row space_between no-margin">Fun Facts
 									<span id="fact-button">🧩</span>
-								</h2>
+								</h3>
 								<p id="fact-text">Click the button to learn something new!</p>
 							</div>
 						</div>
@@ -76,7 +76,7 @@
 							<img id="nasa-image" src="" alt="NASA Image" />
 						</div>
 						<div class="flex-column end">
-							<h2>NASA Image of the Day</h2>
+							<h3>NASA Image of the Day</h3>
 							<div class="description">
 								<strong id="nasa-title"></strong>
 								<p id="nasa-description"></p>
@@ -87,25 +87,25 @@
 				<div class="flex-row third-row">
 					<div class="flex-column cat">
 						<div class="widget" id="cat-widget">
-							<h2 class="pet-title">Pet Snapshot
+							<h3 class="pet-title">Pet Snapshot
 								<div>
 									<img id="dog-button" src="/images/616408.png" alt="puppy icon" width="30"
 										height="30">
 									<img id="cat-button" src="/images/616430.png" alt="cat icon" width="30" height="30">
 								</div>
-							</h2>
+							</h3>
 							<img id="pet-image" src="" alt="Random Cat" />
 						</div>
 					</div>
 					<div class="flex-column joke">
 						<div class="widget" id="joke-widget">
-							<h2>Joke Teller</h2>
+							<h3>Joke Teller</h3>
 							<span id="joke-button" class="joke-refresh"> 🎭 </span>
 							<p id="joke-text">Click the button for a joke!</p>
 						</div>
 					</div>
 					<div class="widget" id="movie-quote-widget">
-						<h2>Movie Quote</h2>
+						<h3>Movie Quote</h3>
 						<div class="flex-column space_between movie-quote-container">
 							<p id="movie-quote-text" class="quote"></p>
 							<p class="meta">
@@ -123,7 +123,7 @@
 			</div>
 			<div class="flex-column second-col">
 				<div class="widget analog-clock-widget">
-					<h2>Clock</h2>
+					<h3>Clock</h3>
 					<div class="clock">
 						<!-- Number labels -->
 						<div class="number number12">12</div>
@@ -139,7 +139,7 @@
 					</div>
 				</div>
 				<div class="widget calculator-widget">
-					<h2>Calculator</h2>
+					<h3>Calculator</h3>
 					<div class="calculator">
 						<input type="text" class="calc-display" id="calc-display" disabled />
 						<div class="calc-buttons">
@@ -169,7 +169,7 @@
 				</div>
 				<div class="widget" id="bmi-widget">
 					<form id="bmi-form">
-						<h2 class="flex-row space_between">BMI Check <button type="submit">⚖️</button></h2>
+						<h3 class="flex-row space_between">BMI Check <button type="submit">⚖️</button></h3>
 						<input type="number" id="bmi-weight" placeholder="Weight (kg)" required step="any">
 						<input type="number" id="bmi-height" placeholder="Height (m)" required step="any">
 					</form>
@@ -184,11 +184,14 @@
 			</div>
 			<div class="flex-column art-container">
 				<div id="art-of-the-day" class="widget">
-					<h3>🎨 Art of the Day</h3>
-					<img id="art-image" src="" alt="Artwork of the day" />
-					<p id="art-title"></p>
-					<p id="art-artist"></p>
-					<small id="art-date"></small>
+					<h3>Art of the Day</h3>
+					<div class="flex-column space_between art-img">
+						<img id="art-image" src="" alt="Artwork of the day" />
+						<p class="flex-column art-details">
+							<em id="art-title"></em>
+							<span id="art-artist"></span>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
