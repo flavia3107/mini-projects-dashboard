@@ -18,3 +18,7 @@
 #fact-button {
 	cursor: pointer;
 }
+
+.fun-fact-widget h3 {
+	color: #333;
+}

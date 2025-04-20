@@ -1,0 +1,24 @@
+.todo {
+	width: 40%;
+}
+
+#todo-widget {
+	max-height: 22.5rem;
+	overflow: hidden;
+	height: 100%;
+}
+
+ul {
+	list-style: none;
+	overflow: auto;
+	max-height: 18rem;
+	padding-right: 1rem;
+}
+
+li.flex-row {
+	text-transform: capitalize;
+	padding: 1rem;
+	border-bottom: 1px solid #d3d3d3;
+	font-size: 0.9rem;
+	margin-bottom: 0 !important;
+}

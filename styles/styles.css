@@ -9,6 +9,9 @@
 @import "./nasa-widget.css";
 @import "./pet-image-widget.css";
 @import "./quote-widget.css";
+@import "./todo-widget.css";
+@import "./responsivity.css";
+@import "./navigation-toolbar.css";
 
 /* Basic reset */
 * {
@@ -87,37 +90,12 @@ input {
 	height: 10.5rem;
 }
 
-ul {
-	list-style: none;
-	overflow: auto;
-	max-height: 18rem;
-	padding-right: 1rem;
-}
-
-li.flex-row {
-	text-transform: capitalize;
-	padding: 1rem;
-	border-bottom: 1px solid #d3d3d3;
-	font-size: 0.9rem;
-	margin-bottom: 0 !important;
-}
-
 .space_between {
 	justify-content: space-between;
 }
 
 .end {
 	justify-content: flex-end;
-}
-
-.todo {
-	width: 40%;
-}
-
-#todo-widget {
-	max-height: 22.5rem;
-	overflow: hidden;
-	height: 100%;
 }
 
 .no-margin {
@@ -144,77 +122,6 @@ li.flex-row {
 	gap: 1.5rem;
 }
 
-@media screen and (max-width: 1026px) {
-	.dashboard,
-	#nasa-widget {
-		flex-direction: column;
-	}
-
-	.first-col,
-	.second-col,
-	#nasa-image {
-		width: 100%;
-	}
-
-	.second-col {
-		flex-direction: row;
-	}
-
-	.second-col .widget {
-		width: 32.5%;
-		height: 100%;
-	}
-
-	.widget {
-		overflow: auto;
-	}
-
-	#bmi-widget {
-		height: 100%;
-	}
-}
-
-@media screen and (max-width: 895px) {
-	.first-row,
-	.second-col,
-	.third-row {
-		flex-direction: column;
-	}
-
-	.first-row .widget,
-	#todo-widget,
-	.quotes,
-	.todo,
-	.second-col .widget,
-	.joke,
-	.cat,
-	#movie-quote-widget {
-		width: 100%;
-		max-width: 100%;
-	}
-
-	#pet-image {
-		height: 84%;
-	}
-
-	.quote-widget {
-		height: calc(100% - 2.9rem);
-	}
-
-	.first-row .widget {
-		min-height: 11rem;
-	}
-
-	.calculator-widget {
-		height: 31rem !important;
-	}
-
-	#bmi-widget,
-	.analog-clock-widget {
-		height: 26rem !important;
-	}
-}
-
 ::-webkit-scrollbar {
 	height: 5px;
 	width: 5px;
@@ -232,66 +139,4 @@ li.flex-row {
 
 ::-webkit-scrollbar-corner {
 	background: transparent;
-}
-
-.logo {
-	display: flex;
-	align-items: center;
-	padding: 1rem;
-}
-
-.logo > img {
-	height: 35px;
-}
-
-.logo-txt {
-	padding-left: 7px;
-	align-items: flex-start;
-}
-
-.logo-img {
-	width: 2rem;
-	margin-right: 3px;
-}
-
-.logo-txt h1,
-.logo-txt span {
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-	letter-spacing: 4px;
-	color: #2e2e2e;
-}
-
-.theme-dark .logo-txt h1,
-.theme-dark .logo-txt span {
-	color: #fff;
-}
-
-.logo-txt h1 {
-	font-weight: bolder;
-	font-size: 1rem;
-}
-
-.logo-txt span {
-	font-weight: lighter;
-	font-size: 0.85rem;
-}
-
-.row {
-	display: flex;
-	align-items: center;
-	padding: 1rem;
-}
-
-a {
-	text-decoration: none;
-}
-
-header {
-	align-items: center;
-}
-
-.second-main-row {
-	gap: 0;
 }
