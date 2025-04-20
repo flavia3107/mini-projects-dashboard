@@ -11,6 +11,7 @@
 	padding: 0 2rem;
 	justify-items: center;
 	margin: 1rem auto;
+	gap: 1.5rem;
 }
 
 #nasa-widget {
@@ -154,10 +155,6 @@ input {
 .flex-row {
 	display: flex;
 	gap: 1.5rem;
-}
-
-.flex-row:not(.widget) {
-	margin-bottom: 1.5rem;
 }
 
 .flex-column {
@@ -504,9 +501,35 @@ li.flex-row {
 	padding: 0.6rem 0.6rem 0;
 	border-radius: 5px;
 }
+.art-container {
+	width: 49%;
+	height: 40rem;
+}
+
+#art-of-the-day {
+	height: 100%;
+}
+
+#art-of-the-day img {
+	width: 100%;
+	height: 80%;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-top: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#art-of-the-day p,
+#art-of-the-day small {
+	margin: 6px 0;
+	color: var(--text-color);
+	font-size: 0.9rem;
+	text-align: center;
+}
 
 .first-col {
 	width: 70%;
+	gap: 1.5rem;
 }
 
 .second-col {
@@ -660,4 +683,8 @@ a {
 
 header {
 	align-items: center;
+}
+
+.second-main-row {
+	gap: 0;
 }
