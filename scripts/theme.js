@@ -1,20 +1,30 @@
 export function setTheme() {
-	const buttons = document.querySelectorAll('#theme-toggle button');
+	const toggleButton = document.querySelector('#theme-toggle button');
+	const icon = toggleButton.querySelector('i');
 	const savedTheme = localStorage.getItem('theme') || 'light';
-	applyTheme(savedTheme);
+	const img = document.querySelector('.logo-img');
 
-	buttons.forEach((btn) => {
-		btn.classList.toggle('active', btn.dataset.theme === savedTheme);
-		btn.addEventListener('click', handleThemeCallback);
+	applyTheme(savedTheme);
+	updateIcon(savedTheme);
+
+	toggleButton.addEventListener('click', () => {
+		const currentTheme = document.body.classList.contains('theme-light') ? 'light' : 'dark';
+		const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+		applyTheme(newTheme);
+		localStorage.setItem('theme', newTheme);
+		updateIcon(newTheme);
 	});
 
-	function handleThemeCallback() {
-		const selectedTheme = this.dataset.theme;
-		applyTheme(selectedTheme);
-		localStorage.setItem('theme', selectedTheme);
-
-		buttons.forEach(b => b.classList.remove('active'));
-		this.classList.add('active');
+	function updateIcon(theme) {
+		if (theme === 'light') {
+			icon.className = 'fas fa-moon';
+			toggleButton.setAttribute('title', 'Switch to Dark Mode');
+			img.src = './assets/images/logo.svg';
+		} else {
+			icon.className = 'fas fa-sun';
+			toggleButton.setAttribute('title', 'Switch to Light Mode');
+			img.src = './assets/images/logo-white.svg';
+		}
 	}
 }
 

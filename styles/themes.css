@@ -13,7 +13,7 @@
 	--border-color: #d3d3d3;
 	--joke-background: #fffbf6;
 	--joke-border: #ffe0b2;
-	--light-blue: #fafcff;
+	--light-blue: #f3faff;
 }
 
 body {
@@ -44,7 +44,7 @@ body {
 	--border-color: #d3d3d3;
 	--joke-background: #fffbf6;
 	--joke-border: #ffe0b2;
-	--light-blue: #fafcff;
+	--light-blue: #f3faff;
 }
 
 .theme-dark {
@@ -65,31 +65,17 @@ body {
 	--light-blue: #abd2ff;
 }
 
-#theme-toggle {
-	display: flex;
-	gap: 0.5rem;
-	justify-content: center;
-	margin: 0.5rem;
-}
-
 #theme-toggle button {
-	font-size: 1.5rem;
 	background: none;
-	border: 2px solid transparent;
-	border-radius: 8px;
-	padding: 0.5rem;
+	border: none;
 	cursor: pointer;
-	transition: transform 0.2s ease, border-color 0.2s ease;
+	font-size: 1.5rem;
 	color: var(--text-color);
+	transition: transform 0.3s ease;
 }
 
 #theme-toggle button:hover {
 	transform: scale(1.1);
-	border-color: var(--accent-color);
-}
-
-#theme-toggle button.active {
-	border-color: var(--accent-color);
 }
 
 .clock {
