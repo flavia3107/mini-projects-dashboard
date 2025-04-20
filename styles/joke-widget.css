@@ -1,0 +1,28 @@
+#joke-widget {
+	border-radius: 12px;
+	padding: 1rem;
+	font-family: "Segoe UI", sans-serif;
+	color: #4e342e;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	text-align: center;
+}
+
+#joke-text {
+	font-size: 1.1rem;
+	line-height: 1.4;
+	margin-bottom: 15px;
+	min-height: 60px;
+}
+
+.joke-refresh {
+	font-size: 1.5rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.joke {
+	width: 29%;
+	max-width: 18rem;
+}

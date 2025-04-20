@@ -1,0 +1,49 @@
+.movie-quote-container {
+	height: calc(100% - 4.5rem) !important;
+}
+
+#movie-quote-widget {
+	height: 25rem;
+}
+
+#movie-quote-widget {
+	padding: 1rem;
+	border-radius: 12px;
+	max-width: 22rem;
+	font-family: "Georgia", serif;
+	position: relative;
+	width: 32%;
+}
+
+.quote {
+	font-style: italic;
+	font-size: 1.2rem;
+	margin-bottom: 2srem;
+	line-height: 1.4;
+	position: relative;
+	color: #878787;
+}
+
+.meta {
+	font-size: 0.95rem;
+	color: #666;
+	text-align: end;
+}
+
+.character {
+	font-weight: bold;
+	color: #666;
+}
+
+.actor {
+	font-style: italic;
+	color: #777;
+}
+
+.movie-title {
+	font-weight: 500;
+}
+
+.year {
+	color: #999;
+}
