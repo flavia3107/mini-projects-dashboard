@@ -2,6 +2,8 @@
 @import "./themes.css";
 @import "./bmi-calculator-widget.css";
 @import "./calculator-widget.css";
+@import "./clock-widget.css";
+@import "./fact-widget.css";
 
 /* Basic reset */
 * {
@@ -31,96 +33,10 @@
 	border-radius: 5px;
 }
 
-.analog-clock-widget {
-	display: flex;
-	flex-direction: column;
-	height: 22.5rem;
-	min-width: fit-content;
-}
-
-.clock {
-	position: relative;
-	width: 220px;
-	height: 220px;
-	border-radius: 50%;
-	margin: auto;
-}
-
 .widget {
 	transition: background-color 0.3s ease, color 0.3s ease;
 	padding: 1rem;
 	border-radius: 8px;
-}
-
-/* Hands */
-.hand {
-	position: absolute;
-	bottom: 50%;
-	left: 50%;
-	transform-origin: bottom;
-	transform: translateX(-50%) rotate(0deg);
-}
-
-.hour {
-	width: 6px;
-	height: 50px;
-	z-index: 3;
-}
-
-.minute {
-	width: 5px;
-	height: 75px;
-	z-index: 2;
-}
-
-.second {
-	width: 2px;
-	height: 90px;
-	background-color: #ffb6b6;
-	z-index: 1;
-}
-
-/* Center dot */
-.center-dot {
-	position: absolute;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 5;
-}
-
-/* Numbers */
-.number {
-	position: absolute;
-	font-size: 1.1rem;
-	font-weight: bold;
-}
-
-.number12 {
-	top: 8px;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.number3 {
-	top: 50%;
-	right: 8px;
-	transform: translateY(-50%);
-}
-
-.number6 {
-	bottom: 8px;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.number9 {
-	top: 50%;
-	left: 8px;
-	transform: translateY(-50%);
 }
 
 h3 {
@@ -286,27 +202,6 @@ li.flex-row {
 	height: calc(100% - 2.5rem);
 	justify-content: space-between;
 	overflow: auto;
-}
-
-.fun-fact-widget {
-	border: 2px solid #c2d3e7;
-	border-radius: 1rem;
-	text-align: center;
-	font-family: "Comic Sans MS", "Segoe UI", sans-serif;
-	transition: background-color 0.3s ease;
-}
-
-.fun-fact-widget p {
-	font-size: 1.1rem;
-	color: #444;
-	margin: 0.75rem 0 0;
-	transition: opacity 0.3s ease;
-	overflow: auto;
-	max-height: calc(100% - 1.5rem);
-}
-
-#fact-button {
-	cursor: pointer;
 }
 
 #joke-widget {
