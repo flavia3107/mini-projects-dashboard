@@ -1,0 +1,11 @@
+#pet-image {
+	height: 20rem;
+	width: 100%;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.cat {
+	max-width: 25rem;
+	width: 34%;
+}

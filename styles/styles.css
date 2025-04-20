@@ -7,6 +7,8 @@
 @import "./joke-widget.css";
 @import "./movie-quote-widget.css";
 @import "./nasa-widget.css";
+@import "./pet-image-widget.css";
+@import "./quote-widget.css";
 
 /* Basic reset */
 * {
@@ -53,13 +55,6 @@ input {
 	border: 1px solid #ddd;
 }
 
-#pet-image {
-	height: 20rem;
-	width: 100%;
-	border-radius: 5px;
-	object-fit: cover;
-}
-
 .flex-row {
 	display: flex;
 	gap: 1.5rem;
@@ -68,11 +63,6 @@ input {
 .flex-column {
 	display: flex;
 	flex-direction: column;
-}
-
-.cat {
-	max-width: 25rem;
-	width: 34%;
 }
 
 .second-row {
@@ -132,67 +122,6 @@ li.flex-row {
 
 .no-margin {
 	margin-bottom: 0.5rem !important;
-}
-
-#dog-button,
-#cat-button,
-#quote-button {
-	cursor: pointer;
-}
-
-.pet-title {
-	display: flex;
-	justify-content: space-between;
-}
-
-#quote-text {
-	font-size: 1.2rem;
-	font-style: italic;
-	display: inline;
-}
-
-.quote-open,
-.quote-close {
-	font-size: 1.8rem;
-	line-height: 1;
-	position: relative;
-	top: 2px;
-	font-style: italic;
-	opacity: 0.5;
-}
-
-.quote-close {
-	vertical-align: bottom;
-}
-
-#quote-author {
-	font-size: 1rem;
-	font-weight: bold;
-	color: #767676;
-	text-align: end;
-}
-
-.quote-widget {
-	display: flex;
-	flex-direction: column;
-	height: calc(100% - 2.5rem);
-	justify-content: space-between;
-	overflow: auto;
-}
-
-.refresh-btn {
-	position: absolute;
-	bottom: 1rem;
-	right: 1rem;
-	background: none;
-	border: none;
-	font-size: 1.4rem;
-	cursor: pointer;
-	transition: transform 0.2s ease;
-}
-
-.refresh-btn:hover {
-	transform: rotate(20deg);
 }
 
 #container {

@@ -1,0 +1,38 @@
+#quote-button .cursor {
+	cursor: pointer;
+}
+
+#quote-text {
+	font-size: 1.2rem;
+	font-style: italic;
+	display: inline;
+}
+
+.quote-open,
+.quote-close {
+	font-size: 1.8rem;
+	line-height: 1;
+	position: relative;
+	top: 2px;
+	font-style: italic;
+	opacity: 0.5;
+}
+
+.quote-close {
+	vertical-align: bottom;
+}
+
+#quote-author {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #767676;
+	text-align: end;
+}
+
+.quote-widget {
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 2.5rem);
+	justify-content: space-between;
+	overflow: auto;
+}

@@ -47,3 +47,18 @@
 .year {
 	color: #999;
 }
+
+.refresh-btn {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	font-size: 1.4rem;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.refresh-btn:hover {
+	transform: rotate(20deg);
+}
