@@ -122,6 +122,10 @@ input {
 	gap: 1.5rem;
 }
 
+.word-widgets {
+	width: 30%;
+}
+
 ::-webkit-scrollbar {
 	height: 5px;
 	width: 5px;
