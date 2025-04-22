@@ -11,6 +11,7 @@ import { setCalculator } from './scripts/calculator-widget.js';
 import { setTheme } from './scripts/theme.js';
 import { loadArtOfTheDay } from './scripts/art-of-day.js';
 import { loadWordOfTheDay } from './scripts/word-of-day-widget.js';
+import { loadHistoryWidget } from './scripts/today-in-history-widget.js';
 
 setInterval(updateAnalogClock, 1000);
 updateAnalogClock();
@@ -26,3 +27,4 @@ setCalculator();
 setTheme();
 loadArtOfTheDay();
 loadWordOfTheDay();
+loadHistoryWidget();

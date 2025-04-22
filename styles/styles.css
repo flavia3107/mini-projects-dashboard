@@ -13,6 +13,7 @@
 @import "./responsivity.css";
 @import "./navigation-toolbar.css";
 @import "./word-of-day-widget.css";
+@import "./today-in-history-widget.css";
 
 /* Basic reset */
 * {
@@ -125,6 +126,7 @@ input {
 
 .word-widgets {
 	width: 30%;
+	gap: 1.5rem;
 }
 
 ::-webkit-scrollbar {

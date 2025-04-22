@@ -1,0 +1,18 @@
+.history-widget {
+	height: 52%;
+}
+
+.history-widget ul {
+	padding: 0;
+	list-style: none;
+}
+
+.history-widget li {
+	margin-bottom: 0.75rem;
+	line-height: 1.4;
+}
+
+.history-widget a {
+	font-size: 0.85rem;
+	color: var(--accent-color);
+}
