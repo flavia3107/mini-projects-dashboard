@@ -1,9 +1,5 @@
 #word-of-the-day {
-	background: var(--widget-bg);
-	color: var(--widget-text);
-	padding: 1rem;
-	border-radius: 1rem;
-	box-shadow: var(--widget-shadow);
+	height: 45%;
 }
 
 .word-card h3 {
@@ -14,14 +10,18 @@
 .word-card .phonetic {
 	color: var(--widget-accent);
 	font-style: italic;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1.5rem;
 }
 
 #play-audio {
 	background: none;
-	border: 1px solid var(--widget-accent);
 	padding: 0.3rem 0.6rem;
 	border-radius: 5px;
 	cursor: pointer;
-	color: var(--widget-accent);
+	margin-left: 0.5rem;
+	color: var(--title-color);
+}
+
+.word-card {
+	height: 75%;
 }

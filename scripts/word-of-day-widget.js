@@ -15,12 +15,12 @@ export async function loadWordOfTheDay() {
 		const partOfSpeech = meanings[0]?.partOfSpeech;
 
 		container.innerHTML = `
-			<h2>📖 Word of the Day</h2>
-			<div class="word-card">
+			<h3>Word of the Day</h3>
+			<div class="word-card flex-column">
 				<h3>${word}</h3>
-				<p class="phonetic">${phonetic || ''}</p>
+				<p class="phonetic">${phonetic || ''}${audio ? `<button id="play-audio">🔊 Listen</button>` : ''}</p>
 				<p><em>${partOfSpeech}</em>: ${definition}</p>
-				${audio ? `<button id="play-audio">🔊 Listen</button>` : ''}
+				
 			</div>
 		`;
 
