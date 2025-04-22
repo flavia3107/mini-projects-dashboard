@@ -1,4 +1,15 @@
-const wordList = ['serendipity', 'ephemeral', 'mellifluous', 'sonder', 'epiphany'];
+const wordList = ["serendipity", "eloquent", "solitude", "ethereal",
+	"mellifluous", "effervescent", "ineffable", "epiphany", "petrichor",
+	"euphoria", "limerence", "aesthete", "resilience", "tranquility", "labyrinth", "cascade",
+	"luminescence", "incandescent", "equanimity", "vivacious", "benevolent", "eloquence", "solace",
+	"rhapsody", "quintessential", "aurora", "zen", "nirvana", "muse", "wanderlust",
+	"whimsical", "melancholy", "bliss", "enigma", "radiant", "reverie", "serene", "elegant", "celestial",
+	"ambrosial", "taciturn", "bucolic", "empathy", "verdant", "harbinger", "dappled",
+	"catharsis", "nocturne", "euphony", "sublime", "vestige", "alpenglow", "silhouette", "ambivalent",
+	"placid", "symphony", "umbrage", "savor", "talisman", "aura", "fervor", "lullaby", "quiescent", "resonance",
+	"idyllic", "vellichor", "chimera", "halcyon", "penumbra", "gossamer", "zenith", "umbra", "luminous", "solstice",
+	"aegis", "cacophony", "efface", "lucid", "panacea", "ethos", "quintessence", "resplendent", "tenuous",
+	"ephemeral", "cynosure", "imbue"];
 
 export async function loadWordOfTheDay() {
 	const container = document.querySelector('#word-of-the-day');
