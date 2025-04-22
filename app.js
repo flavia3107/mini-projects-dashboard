@@ -10,6 +10,7 @@ import { updateAnalogClock } from './scripts/clock-widget.js';
 import { setCalculator } from './scripts/calculator-widget.js';
 import { setTheme } from './scripts/theme.js';
 import { loadArtOfTheDay } from './scripts/art-of-day.js';
+import { loadWordOfTheDay } from './scripts/word-of-day-widget.js';
 
 setInterval(updateAnalogClock, 1000);
 updateAnalogClock();
@@ -24,3 +25,4 @@ bmiCalculator();
 setCalculator();
 setTheme();
 loadArtOfTheDay();
+loadWordOfTheDay();

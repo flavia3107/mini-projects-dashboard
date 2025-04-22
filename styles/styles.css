@@ -12,6 +12,7 @@
 @import "./todo-widget.css";
 @import "./responsivity.css";
 @import "./navigation-toolbar.css";
+@import "./word-of-day-widget.css";
 
 /* Basic reset */
 * {
