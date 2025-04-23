@@ -1,5 +1,5 @@
 .movie-quote-container {
-	height: calc(100% - 4.5rem) !important;
+	height: calc(100% - 1.5rem) !important;
 }
 
 #movie-quote-widget {
@@ -9,10 +9,8 @@
 #movie-quote-widget {
 	padding: 1rem;
 	border-radius: 12px;
-	max-width: 22rem;
 	font-family: "Georgia", serif;
 	position: relative;
-	width: 32%;
 }
 
 .quote {
@@ -49,13 +47,6 @@
 }
 
 .refresh-btn {
-	position: absolute;
-	bottom: 1rem;
-	right: 1rem;
-	background: none;
-	border: none;
-	font-size: 1.4rem;
-	cursor: pointer;
 	transition: transform 0.2s ease;
 }
 

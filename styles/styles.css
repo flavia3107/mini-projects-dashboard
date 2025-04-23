@@ -129,6 +129,11 @@ input {
 	gap: 1.5rem;
 }
 
+.third-row .quotes {
+	width: 63.5%;
+	gap: 0;
+}
+
 ::-webkit-scrollbar {
 	height: 5px;
 	width: 5px;
