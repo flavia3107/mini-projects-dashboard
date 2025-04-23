@@ -5,11 +5,15 @@
 .history-widget ul {
 	padding: 0;
 	list-style: none;
+	max-height: 90%;
 }
 
 .history-widget li {
 	margin-bottom: 0.75rem;
 	line-height: 1.4;
+	border: none;
+	padding: 0.3rem;
+	text-transform: none;
 }
 
 .history-widget a {

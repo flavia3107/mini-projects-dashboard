@@ -8,11 +8,11 @@ export async function loadHistoryWidget() {
 
 		container.innerHTML = `
 			<h3>Today in History (${data.date})</h3>
-			<ul>
+			<ul class="timeline">
 				${events.map(event => `
-					<li>
-						<strong>${event.year}</strong>: ${event.text}
-						${event.links.length > 0 ? `<a href="${event.links[0].link}" target="_blank">[read more]</a>` : ''}
+					<li class="flex-row history-items timeline-year">
+						<strong class="timeline-event">${event.year}</strong> ${event.text}
+						 <span class="flex-column end">${event.links.length ? `<a href="${event.links[0].link}" target="_blank">more</a>` : ''}</span>
 					</li>
 				`).join('')}
 			</ul>
