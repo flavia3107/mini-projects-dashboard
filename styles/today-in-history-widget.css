@@ -18,5 +18,28 @@
 
 .history-widget a {
 	font-size: 0.85rem;
-	color: var(--accent-color);
+	font-weight: 600;
+	color: var(--text-color);
+}
+
+.timeline-event {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.timeline-event::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 25px;
+	width: 1px;
+	height: 90%;
+	background-color: #c3c3c3;
+}
+
+.event-details {
+	color: var(--title-color);
 }
