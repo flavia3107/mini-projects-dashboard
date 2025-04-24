@@ -12,6 +12,7 @@ import { setTheme } from './scripts/theme.js';
 import { loadArtOfTheDay } from './scripts/art-of-day.js';
 import { loadWordOfTheDay } from './scripts/word-of-day-widget.js';
 import { loadHistoryWidget } from './scripts/today-in-history-widget.js';
+import { getPlanetData } from './scripts/planet-positions-widget.js';
 
 setInterval(updateAnalogClock, 1000);
 updateAnalogClock();
@@ -28,3 +29,4 @@ setTheme();
 loadArtOfTheDay();
 loadWordOfTheDay();
 loadHistoryWidget();
+getPlanetData();

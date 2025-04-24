@@ -1,15 +1,35 @@
 #planet-widget {
-	background: var(--widget-bg);
+	background-color: var(--widget-bg, #1e1e2f);
+	color: var(--widget-text, #f0f0f0);
 	padding: 1rem;
-	border-radius: 8px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	font-family: "Segoe UI", sans-serif;
+}
+
+#planet-widget h2 {
+	margin-bottom: 0.8rem;
+	font-size: 1.3rem;
+	text-align: center;
 }
 
 #planet-list {
 	list-style: none;
+	margin: 0;
 	padding: 0;
 }
 
-#planet-list li {
-	padding: 0.3rem 0;
-	border-bottom: 1px solid var(--widget-border);
+.planet-row {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.6rem 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.planet-name {
+	font-weight: 600;
+}
+
+.planet-detail {
+	color: #aaa;
 }
