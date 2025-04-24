@@ -1,0 +1,15 @@
+#planet-widget {
+	background: var(--widget-bg);
+	padding: 1rem;
+	border-radius: 8px;
+}
+
+#planet-list {
+	list-style: none;
+	padding: 0;
+}
+
+#planet-list li {
+	padding: 0.3rem 0;
+	border-bottom: 1px solid var(--widget-border);
+}
