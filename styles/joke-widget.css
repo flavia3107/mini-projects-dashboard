@@ -9,7 +9,9 @@
 
 #joke-text {
 	font-size: 1.1rem;
-	line-height: 1.4;
+	height: 75%;
+	overflow: auto;
+	line-height: 1.4rem;
 }
 
 .joke-refresh {

@@ -27,6 +27,9 @@
 	display: inline-block;
 	margin-bottom: 1rem;
 	padding-bottom: 0.5rem;
+	width: fit-content;
+	min-width: 4rem;
+	text-align: center;
 }
 
 .timeline-event::after {
@@ -42,4 +45,5 @@
 
 .event-details {
 	color: var(--title-color);
+	width: 32rem;
 }
