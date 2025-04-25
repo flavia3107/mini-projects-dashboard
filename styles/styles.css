@@ -135,6 +135,11 @@ input {
 	gap: 0;
 }
 
+.planet-container {
+	width: 40%;
+	height: 40rem;
+}
+
 ::-webkit-scrollbar {
 	height: 5px;
 	width: 5px;
