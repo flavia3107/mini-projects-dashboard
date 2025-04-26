@@ -6,6 +6,7 @@
 	padding: 0;
 	list-style: none;
 	max-height: 90%;
+	padding-right: 1rem;
 }
 
 .history-widget li {
