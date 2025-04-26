@@ -120,28 +120,28 @@
 
 .rotate1 {
 	animation: orbit 2.4s linear infinite;
-} /* Mercury: 0.24 * 10s */
+}
 .rotate2 {
 	animation: orbit 6.2s linear infinite;
-} /* Venus:   0.62 * 10s */
+}
 .rotate3 {
 	animation: orbit 10s linear infinite;
-} /* Earth:   1.0 * 10s  */
+}
 .rotate4 {
 	animation: orbit 18.8s linear infinite;
-} /* Mars:    1.88 * 10s */
+}
 .rotate5 {
 	animation: orbit 118.6s linear infinite;
-} /* Jupiter: 11.86 * 10s */
+}
 .rotate6 {
 	animation: orbit 294.6s linear infinite;
-} /* Saturn:  29.46 * 10s */
+}
 .rotate7 {
 	animation: orbit 840.1s linear infinite;
-} /* Uranus:  84.01 * 10s */
+}
 .rotate8 {
 	animation: orbit 1647.9s linear infinite;
-} /* Neptune: 164.79 * 10s */
+}
 
 @keyframes orbit {
 	from {
