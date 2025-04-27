@@ -1,16 +1,17 @@
 @media screen and (max-width: 1026px) {
 	.dashboard,
-	#nasa-widget {
+	#nasa-widget,
+	.first-main-row {
 		flex-direction: column;
 	}
 
 	.first-col,
-	.second-col,
+	.flex-column.second-col,
 	#nasa-image {
 		width: 100%;
 	}
 
-	.second-col {
+	.flex-column.second-col {
 		flex-direction: row;
 	}
 
@@ -23,7 +24,8 @@
 		overflow: auto;
 	}
 
-	#bmi-widget {
+	#bmi-widget,
+	#nasa-widget {
 		height: 100%;
 	}
 }
