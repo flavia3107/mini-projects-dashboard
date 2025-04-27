@@ -7,12 +7,12 @@
 	position: absolute;
 	width: 45px;
 	height: 45px;
-	background: #fbff00;
+	background: #fff820;
 	border-radius: 50%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	box-shadow: 0 0 30px yellow;
+	box-shadow: 0 0 30px #fff820;
 }
 
 /* Orbits (static circles) */
@@ -26,36 +26,37 @@
 }
 
 .orbit1 {
-	width: 110px;
-	height: 110px;
+	width: 30%;
+	height: 23.5%;
 }
 .orbit2 {
-	width: 150px;
-	height: 150px;
+	width: 40%;
+	height: 31.5%;
 }
 .orbit3 {
-	width: 190px;
-	height: 190px;
+	width: 50%;
+	height: 39.5%;
 }
 .orbit4 {
-	width: 230px;
-	height: 230px;
+	width: 60%;
+	height: 47.5%;
 }
 .orbit5 {
-	width: 285px;
-	height: 285px;
+	width: 70%;
+	height: 55%;
 }
 .orbit6 {
-	width: 345px;
-	height: 345px;
+	width: 80%;
+	height: 63.5%;
 }
+
 .orbit7 {
-	width: 405px;
-	height: 405px;
+	width: 90%;
+	height: 70%;
 }
 .orbit8 {
-	width: 460px;
-	height: 460px;
+	width: 100%;
+	height: 79%;
 }
 
 /* Rotation wrappers for planet movement */
