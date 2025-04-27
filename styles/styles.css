@@ -137,6 +137,7 @@ input {
 
 .planet-container {
 	height: 30.5rem;
+	overflow: hidden;
 }
 
 .second-main-row {
