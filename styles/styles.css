@@ -10,11 +10,11 @@
 @import "./pet-image-widget.css";
 @import "./quote-widget.css";
 @import "./todo-widget.css";
-@import "./responsivity.css";
 @import "./navigation-toolbar.css";
 @import "./word-of-day-widget.css";
 @import "./today-in-history-widget.css";
 @import "./planet-positions-widget.css";
+@import "./responsivity.css";
 
 /* Basic reset */
 * {

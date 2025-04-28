@@ -92,4 +92,37 @@
 	.description {
 		max-height: 100%;
 	}
+
+	.orbit1 {
+		width: 18vw;
+		height: 18vw;
+	}
+	.orbit2 {
+		width: 26vw;
+		height: 26vw;
+	}
+	.orbit3 {
+		width: 35vw;
+		height: 35vw;
+	}
+	.orbit4 {
+		width: 45vw;
+		height: 45vw;
+	}
+	.orbit5 {
+		width: 55vw;
+		height: 55vw;
+	}
+	.orbit6 {
+		width: 64vw;
+		height: 64vw;
+	}
+	.orbit7 {
+		width: 74vw;
+		height: 74vw;
+	}
+	.orbit8 {
+		width: 85vw;
+		height: 85vw;
+	}
 }
