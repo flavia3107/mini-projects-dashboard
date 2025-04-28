@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 895px) {
 	.first-row,
-	.second-col,
+	.flex-column.second-col,
 	.third-row {
 		flex-direction: column;
 	}
@@ -52,9 +52,11 @@
 	.second-col .widget,
 	.joke,
 	.cat,
-	#movie-quote-widget {
-		width: 100%;
-		max-width: 100%;
+	#movie-quote-widget,
+	.word-widgets,
+	.art-container {
+		width: 100% !important;
+		max-width: 100% !important;
 	}
 
 	#pet-image {
@@ -76,5 +78,18 @@
 	#bmi-widget,
 	.analog-clock-widget {
 		height: 26rem !important;
+	}
+
+	.planet-container.widget {
+		height: calc(100vw + 4rem) !important;
+	}
+
+	.second-main-row {
+		flex-direction: column;
+		height: 100% !important;
+	}
+
+	.description {
+		max-height: 100%;
 	}
 }
