@@ -5,17 +5,15 @@ export function getRandomJoke() {
 	randomJokeCallback();
 }
 
-function randomJokeCallback() {
+async function randomJokeCallback() {
 	const jokeText = document.getElementById('joke-text');
-	fetch('https://v2.jokeapi.dev/joke/Any')
-		.then(res => res.json())
-		.then(data => {
-			jokeText.textContent = data.type === "single"
-				? data.joke
-				: `${data.setup} ... ${data.delivery}`;
-		})
-		.catch(() => {
-			jokeText.textContent = "Failed to load a joke!";
-		});
+	try {
+		const response = await fetch('https://v2.jokeapi.dev/joke/Any');
+		const data = await response.json();
+		jokeText.textContent = data.type === "single"
+			? data.joke
+			: `${data.setup} ... ${data.delivery}`;
+	} catch (error) {
+		jokeText.textContent = "Failed to load a joke!";
+	}
 }
-
