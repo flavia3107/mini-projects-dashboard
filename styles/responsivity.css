@@ -93,6 +93,10 @@
 		max-height: 100%;
 	}
 
+	.cat {
+		height: 44rem !important;
+	}
+
 	.orbit1 {
 		width: 18vw;
 		height: 18vw;
