@@ -1,37 +1,30 @@
 
-// Get Random Cat Image
+// Get Random Pet Image
 export function getRandomPetImage() {
 	const catButton = document.getElementById('cat-button');
-	catButton.addEventListener('click', catCallback);
-
 	const dogButton = document.getElementById('dog-button');
-	dogButton.addEventListener('click', dogCallback);
 
-	dogCallback();
+	catButton.addEventListener('click', () => petCallback('cat'));
+	dogButton.addEventListener('click', () => petCallback('dog'));
+
+	petCallback('dog'); // Load a dog image by default
 }
 
-function dogCallback() {
+async function petCallback(type) {
 	const petImage = document.getElementById('pet-image');
-	fetch('https://dog.ceo/api/breeds/image/random')
-		.then(response => response.json())
-		.then(data => {
-			petImage.src = data.message;
-		})
-		.catch(error => {
-			petImage.src = "";
-			alert("Failed to load dog image!");
-		});
-}
 
-function catCallback() {
-	const petImage = document.getElementById('pet-image');
-	fetch('https://api.thecatapi.com/v1/images/search')
-		.then(response => response.json())
-		.then(data => {
-			petImage.src = data[0].url;
-		})
-		.catch(error => {
-			petImage.src = "";
-			alert("Failed to load cat image!");
-		});
+	const urls = {
+		dog: 'https://dog.ceo/api/breeds/image/random',
+		cat: 'https://api.thecatapi.com/v1/images/search'
+	};
+
+	try {
+		const response = await fetch(urls[type]);
+		const data = await response.json();
+
+		petImage.src = type === 'dog' ? data.message : data[0].url;
+	} catch (error) {
+		petImage.src = "";
+		alert(`Failed to load ${type} image!`);
+	}
 }
