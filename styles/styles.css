@@ -14,6 +14,7 @@
 @import "./word-of-day-widget.css";
 @import "./today-in-history-widget.css";
 @import "./planet-positions-widget.css";
+@import "./poem-widget.css";
 @import "./responsivity.css";
 
 /* Basic reset */
@@ -128,6 +129,11 @@ input {
 .word-widgets {
 	width: 30%;
 	gap: 1.5rem;
+}
+
+.poem-container {
+	width: 30%;
+	height: 40rem;
 }
 
 .third-row .quotes {
