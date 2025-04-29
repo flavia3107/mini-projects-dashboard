@@ -15,17 +15,7 @@
 	line-height: 1.4;
 }
 
-#refresh-poem {
-	margin-top: 1rem;
-	padding: 0.5rem 1rem;
-	background: var(--accent-color);
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	color: white;
-}
-
 .poem {
 	overflow: auto;
-	max-height: 33rem;
+	max-height: 32rem;
 }
