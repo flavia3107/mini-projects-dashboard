@@ -1,20 +1,28 @@
 .countdown-timer-widget {
-	padding: 10px;
-	border: 1px solid #ccc;
+	width: 37%;
 	text-align: center;
 }
 
 .inputs input {
-	width: 50px;
+	width: 5rem;
 	text-align: center;
 	margin: 0 2px;
+	background: #ffffff0f;
+	border-color: #686868;
 }
 
 .display {
 	font-size: 2rem;
-	margin: 10px 0;
+	margin: 4rem 0;
+	font-family: monospace;
 }
 
 .controls button {
 	margin: 0 5px;
+}
+
+.countdown {
+	justify-content: center;
+	height: 80%;
+	gap: 1rem;
 }

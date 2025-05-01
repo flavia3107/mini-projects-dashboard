@@ -16,6 +16,7 @@
 @import "./planet-positions-widget.css";
 @import "./poem-widget.css";
 @import "./stopwatch-widget.css";
+@import "./countdown-widget.css";
 @import "./responsivity.css";
 
 /* Basic reset */
