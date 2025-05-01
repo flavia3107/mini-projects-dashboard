@@ -13,6 +13,7 @@ import { loadArtOfTheDay } from './scripts/art-of-day.js';
 import { loadWordOfTheDay } from './scripts/word-of-day-widget.js';
 import { loadHistoryWidget } from './scripts/today-in-history-widget.js';
 import { fetchPoem } from './scripts/poem-widget.js';
+import { initStopwatchWidget } from './scripts/stopwatch-widget.js';
 
 setInterval(updateAnalogClock, 1000);
 updateAnalogClock();
@@ -30,3 +31,4 @@ loadArtOfTheDay();
 loadWordOfTheDay();
 loadHistoryWidget();
 fetchPoem();
+initStopwatchWidget();
