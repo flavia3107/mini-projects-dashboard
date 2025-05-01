@@ -15,6 +15,7 @@
 @import "./today-in-history-widget.css";
 @import "./planet-positions-widget.css";
 @import "./poem-widget.css";
+@import "./stopwatch-widget.css";
 @import "./responsivity.css";
 
 /* Basic reset */

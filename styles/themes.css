@@ -89,7 +89,8 @@ body {
 }
 
 .number,
-.btn:not(.op, .equals, .clear) {
+.btn:not(.op, .equals, .clear),
+.stopwatch-controls button {
 	color: var(--clock-hands);
 }
 
