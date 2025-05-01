@@ -14,6 +14,7 @@ import { loadWordOfTheDay } from './scripts/word-of-day-widget.js';
 import { loadHistoryWidget } from './scripts/today-in-history-widget.js';
 import { fetchPoem } from './scripts/poem-widget.js';
 import { initStopwatchWidget } from './scripts/stopwatch-widget.js';
+import { countdown } from './scripts/countdown-widget.js';
 
 setInterval(updateAnalogClock, 1000);
 updateAnalogClock();
@@ -32,3 +33,4 @@ loadWordOfTheDay();
 loadHistoryWidget();
 fetchPoem();
 initStopwatchWidget();
+countdown();
