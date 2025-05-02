@@ -9,8 +9,8 @@
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-  <script type="module" crossorigin src="/mini-projects-dashboard/assets/index-DBBebUW4.js"></script>
-  <link rel="stylesheet" crossorigin href="/mini-projects-dashboard/assets/index-Dt1uPJKJ.css">
+  <script type="module" crossorigin src="/mini-projects-dashboard/assets/index-CRk-JaYW.js"></script>
+  <link rel="stylesheet" crossorigin href="/mini-projects-dashboard/assets/index-Dy-04FRb.css">
 </head>
 
 <body>
@@ -28,112 +28,216 @@
 			</button>
 		</div>
 	</header>
-	<div class="dashboard flex-row">
-		<div class="flex-column first-col">
-			<div class="flex-row first-row">
-				<div class="flex-column todo">
-					<div class="widget" id="todo-widget">
-						<h2>Tasks</h2>
-						<ul id="todo-list">
-							<li>Loading...</li>
-						</ul>
+	<div class="dashboard flex-column">
+		<div class="flex-row first-main-row">
+			<div class="flex-column first-col">
+				<div class="flex-row first-row">
+					<div class="flex-column todo">
+						<div class="widget" id="todo-widget">
+							<h3>Tasks</h3>
+							<ul id="todo-list">
+								<li>Loading...</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="flex-column quotes">
-					<div class="flex-column">
-						<div class="widget" id="quote-widget">
-							<h2 class="flex-row space_between no-margin">Words of Wisdom <span id="quote-button"
-									class="custom-btn">❝ ❞</span>
-							</h2>
-							<div class="quote-widget">
-								<div class="quote-text">
-									<span class="quote-open">“</span>
-									<span id="quote-text" class="quote-body"></span>
-									<span class="quote-close">”</span>
+					<div class="flex-column quotes">
+						<div class="flex-column">
+							<div class="widget" id="quote-widget">
+								<h3 class="flex-row space_between no-margin">Words of Wisdom <span id="quote-button"
+										class="custom-btn">❝ ❞</span>
+								</h3>
+								<div class="quote-widget">
+									<div class="quote-text">
+										<span class="quote-open">“</span>
+										<span id="quote-text" class="quote-body"></span>
+										<span class="quote-close">”</span>
+									</div>
+									<p id="quote-author"></p>
 								</div>
-								<p id="quote-author"></p>
+							</div>
+						</div>
+						<div class="flex-column">
+							<div class="widget fun-fact-widget flex-column space_between" id="fact-widget">
+								<h3 class="flex-row space_between no-margin">Fun Facts
+									<span id="fact-button">🧩</span>
+								</h3>
+								<p id="fact-text">Click the button to learn something new!</p>
 							</div>
 						</div>
 					</div>
-					<div class="flex-column">
-						<div class="widget fun-fact-widget flex-column space_between" id="fact-widget">
-							<h2 class="flex-row space_between no-margin">Fun Facts
-								<span id="fact-button">🧩</span>
-							</h2>
-							<p id="fact-text">Click the button to learn something new!</p>
-						</div>
-					</div>
 				</div>
-			</div>
-			<div class="flex-row second-row">
-				<div class="widget flex-row" id="nasa-widget">
-					<div class="flex-column">
-						<img id="nasa-image" src="" alt="NASA Image" />
-					</div>
-					<div class="flex-column end">
-						<h2>NASA Image of the Day</h2>
-						<div class="description">
-							<strong id="nasa-title"></strong>
-							<p id="nasa-description"></p>
+				<div class="flex-row second-row">
+					<div class="widget flex-row" id="nasa-widget">
+						<div class="flex-column">
+							<img id="nasa-image" src="" alt="NASA Image" />
 						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flex-row third-row">
-				<div class="flex-column cat">
-					<div class="widget" id="cat-widget">
-						<h2 class="pet-title">Pet Snapshot
-							<div>
-								<img id="dog-button" src="/mini-projects-dashboard/images/616408.png" alt="puppy icon" width="30" height="30">
-								<img id="cat-button" src="/mini-projects-dashboard/images/616430.png" alt="cat icon" width="30" height="30">
+						<div class="flex-column end">
+							<h3>NASA Image of the Day</h3>
+							<div class="description">
+								<strong class="no-margin" id="nasa-title"></strong>
+								<p id="nasa-description"></p>
 							</div>
-						</h2>
-						<img id="pet-image" src="" alt="Random Cat" />
+						</div>
 					</div>
 				</div>
-				<div class="flex-column joke">
-					<div class="widget" id="joke-widget">
-						<h2>Joke Teller</h2>
-						<span id="joke-button" class="joke-refresh"> 🎭 </span>
-						<p id="joke-text">Click the button for a joke!</p>
+				<div class="flex-row third-row">
+					<div class="flex-column cat">
+						<div class="widget" id="cat-widget">
+							<h3 class="pet-title flex-row space_between">Pet Snapshot
+								<div>
+									<img class="cursor" id="dog-button" src="/mini-projects-dashboard/images/616408.png" alt="puppy icon"
+										width="30" height="30">
+									<img class="cursor" id="cat-button" src="/mini-projects-dashboard/images/616430.png" alt="cat icon"
+										width="30" height="30">
+								</div>
+							</h3>
+							<img id="pet-image" src="" alt="Random Cat" />
+						</div>
+					</div>
+					<div class="flex-column quotes">
+						<div class="flex-column joke">
+							<div class="widget" id="joke-widget">
+								<h3 class="flex-row space_between">
+									<span>Joke Teller</span>
+									<span id="joke-button" class="joke-refresh"> 🎭 </span>
+								</h3>
+								<p id="joke-text"></p>
+							</div>
+						</div>
+						<div class="widget" id="movie-quote-widget">
+							<h3 class="flex-row space_between">
+								<span>Movie Quote</span>
+								<span id="movie-quote-button" class="refresh-btn"> 🎬</span>
+							</h3>
+							<div class="flex-column space_between movie-quote-container">
+								<p id="movie-quote-text" class="quote"></p>
+								<p class="meta">
+									<span> — <strong id="character" class="character"></strong>
+										<span id="actor" class="actor"></span></span>
+									<br>
+									<span id="movie-title" class="movie-title"></span>
+									<br>
+									<span id="release-year" class="year"></span>
+								</p>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="flex-column second-col">
+				<div class="widget analog-clock-widget">
+					<h3>Clock</h3>
+					<div class="clock">
+						<!-- Number labels -->
+						<div class="number number12">12</div>
+						<div class="number number3">3</div>
+						<div class="number number6">6</div>
+						<div class="number number9">9</div>
+
+						<!-- Hands -->
+						<div class="hand hour" id="hour-hand"></div>
+						<div class="hand minute" id="minute-hand"></div>
+						<div class="hand second" id="second-hand"></div>
+						<div class="center-dot"></div>
 					</div>
 				</div>
-				<div class="widget" id="movie-quote-widget">
-					<h2>Movie Quote</h2>
-					<div class="flex-column space_between movie-quote-container">
-						<p id="movie-quote-text" class="quote"></p>
-						<p class="meta">
-							<span> — <strong id="character" class="character"></strong>
-								<span id="actor" class="actor"></span></span>
-							<br>
-							<span id="movie-title" class="movie-title"></span>
-							<br>
-							<span id="release-year" class="year"></span>
-						</p>
+				<div class="flex-column planet-container widget">
+					<h3 class="flex-row">Solar System</h3>
+					<div class="solar-system">
+						<div class="sun"></div>
+						<div class="orbit orbit1">
+							<div class="planet-orbit-wrapper rotate1">
+								<div class="planet mercury"></div>
+							</div>
+						</div>
+
+						<div class="orbit orbit2">
+							<div class="planet-orbit-wrapper rotate2">
+								<div class="planet venus"></div>
+							</div>
+						</div>
+
+						<div class="orbit orbit3">
+							<div class="planet-orbit-wrapper rotate3">
+								<div class="planet earth"></div>
+							</div>
+						</div>
+
+						<div class="orbit orbit4">
+							<div class="planet-orbit-wrapper rotate4">
+								<div class="planet mars"></div>
+							</div>
+						</div>
+
+						<div class="orbit orbit5">
+							<div class="planet-orbit-wrapper rotate5">
+								<div class="planet jupiter"></div>
+							</div>
+						</div>
+
+						<div class="orbit orbit6">
+							<div class="planet-orbit-wrapper rotate6">
+								<div class="planet saturn"></div>
+							</div>
+						</div>
+
+						<div class="orbit orbit7">
+							<div class="planet-orbit-wrapper rotate7">
+								<div class="planet uranus"></div>
+							</div>
+						</div>
+
+						<div class="orbit orbit8">
+							<div class="planet-orbit-wrapper rotate8">
+								<div class="planet neptune"></div>
+							</div>
+						</div>
 					</div>
-					<span id="movie-quote-button" class="refresh-btn"> 🎬</span>
+				</div>
+
+				<div class="widget" id="bmi-widget">
+					<form id="bmi-form">
+						<h3 class="flex-row space_between">BMI Check <button type="submit">⚖️</button></h3>
+						<input type="number" id="bmi-weight" placeholder="Weight (kg)" required step="any">
+						<input type="number" id="bmi-height" placeholder="Height (m)" required step="any">
+					</form>
+					<div id="container"></div>
+					<p id="bmi-result"></p>
 				</div>
 			</div>
 		</div>
-		<div class="flex-column second-col">
-			<div class="widget analog-clock-widget">
-				<h2>Clock</h2>
-				<div class="clock">
-					<!-- Number labels -->
-					<div class="number number12">12</div>
-					<div class="number number3">3</div>
-					<div class="number number6">6</div>
-					<div class="number number9">9</div>
-
-					<!-- Hands -->
-					<div class="hand hour" id="hour-hand"></div>
-					<div class="hand minute" id="minute-hand"></div>
-					<div class="hand second" id="second-hand"></div>
-					<div class="center-dot"></div>
+		<div class="flex-row second-main-row">
+			<div class="flex-column word-widgets">
+				<div id="word-of-the-day" class="widget flex-column space_between"></div>
+				<div id="history-widget" class="widget history-widget"></div>
+			</div>
+			<div class="flex-column art-container">
+				<div id="art-of-the-day" class="widget">
+					<h3>Art of the Day</h3>
+					<div class="flex-column space_between art-img">
+						<img id="art-image" src="" alt="Artwork of the day" />
+						<p class="flex-column art-details">
+							<em id="art-title"></em>
+							<span id="art-artist"></span>
+						</p>
+					</div>
 				</div>
 			</div>
+
+			<div class="flex-column poem-container">
+				<div id="poetry-widget" class="widget">
+					<h3 class="flex-row space_between">Poem of the Moment <button id="refresh-poem">📜</button></h3>
+					<div id="poem-content">
+						<p class="loading">Loading...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex-row third-main-row">
 			<div class="widget calculator-widget">
-				<h2>Calculator</h2>
+				<h3>Calculator</h3>
 				<div class="calculator">
 					<input type="text" class="calc-display" id="calc-display" disabled />
 					<div class="calc-buttons">
@@ -161,21 +265,41 @@
 					</div>
 				</div>
 			</div>
-			<div class="widget" id="bmi-widget">
-				<form id="bmi-form">
-					<h2 class="flex-row space_between">BMI Check <button type="submit">⚖️</button></h2>
-					<input type="number" id="bmi-weight" placeholder="Weight (kg)" required step="any">
-					<input type="number" id="bmi-height" placeholder="Height (m)" required step="any">
-				</form>
-				<div id="container"></div>
-				<p id="bmi-result"></p>
+			<div class="widget stopwatch-widget">
+				<h3>Stopwatch</h3>
+				<div class="stopwatch-display">00:00:00</div>
+				<div class="stopwatch-controls">
+					<button id="start-pause-btn">Start</button>
+					<button id="reset-btn">Reset</button>
+				</div>
+			</div>
+			<div class="countdown-timer-widget widget">
+				<h3>Countdown Timer</h3>
+				<div class="flex-column countdown">
+					<div class="inputs">
+						<input type="number" id="hours" placeholder="HH" min="0">
+						<input type="number" id="minutes" placeholder="MM" min="0" max="59">
+						<input type="number" id="seconds" placeholder="SS" min="0" max="59">
+					</div>
+					<div class="display" id="timer-display">00:00:00.000</div>
+					<div class="controls">
+						<button id="start-btn">Start</button>
+						<button id="pause-btn">Pause</button>
+						<button id="reset-btn">Reset</button>
+					</div>
+				</div>
+				<!-- Sound element -->
+				<audio id="alarm-sound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"
+					preload="auto"></audio>
 			</div>
 		</div>
+	</div>
 	</div>
 </body>
 
 </html>
 
 <!-- to do:
-2. clean up css
+4. put html in js files
+5. sanitaze code
 -->
