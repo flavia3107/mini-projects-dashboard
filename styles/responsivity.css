@@ -54,9 +54,14 @@
 	.cat,
 	#movie-quote-widget,
 	.word-widgets,
-	.art-container {
+	.art-container,
+	.poem-container {
 		width: 100% !important;
 		max-width: 100% !important;
+	}
+
+	.flex-row.third-main-row {
+		flex-wrap: wrap;
 	}
 
 	#pet-image {
@@ -71,6 +76,11 @@
 		min-height: 11rem;
 	}
 
+	.widget.stopwatch-widget {
+		min-width: 23rem;
+		height: 23rem;
+	}
+
 	.calculator-widget {
 		height: 31rem !important;
 	}
@@ -82,6 +92,15 @@
 
 	.planet-container.widget {
 		height: calc(100vw + 4rem) !important;
+	}
+
+	.countdown-timer-widget.widget {
+		height: fit-content;
+		width: 100%;
+	}
+
+	.countdown {
+		margin-top: 1rem;
 	}
 
 	.second-main-row {

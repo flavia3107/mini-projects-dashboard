@@ -3,6 +3,7 @@
 	border-radius: 12px;
 	font-family: serif;
 	height: 100%;
+	overflow: hidden;
 }
 
 #poetry-widget h3 {
