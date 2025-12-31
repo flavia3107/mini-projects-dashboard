@@ -9,7 +9,7 @@ export function getRandomQuote() {
 	const handleResponse = (data) => {
 		const quote = data || QUOTES[Math.floor(Math.random() * QUOTES.length)];
 		quoteText.textContent = `${quote.split(" - ")[0]}`;
-		quoteAuthor.textContent = `~${quote.split(" - ")[1]}`;
+		quoteAuthor.textContent = `~${quote.split(" - ")[1] ?? 'Unknown'}`;
 	}
 
 	const randomQuoteCallback = async () => {
