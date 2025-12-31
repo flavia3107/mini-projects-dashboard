@@ -13,7 +13,7 @@ async function movieQuoteCallback() {
 	const movieMovieTitle = document.getElementById('movie-title');
 	const movieReleaseYear = document.getElementById('release-year');
 	const handleResponse = (quote) => {
-		const selectedQuote = quote || MOVIE_QUOTES[Math.floor(Math.random() * MOVIE_QUOTES.length)];
+		const selectedQuote = quote ?? MOVIE_QUOTES[Math.floor(Math.random() * MOVIE_QUOTES.length)];
 		movieQuoteText.textContent = `"${selectedQuote.quote}"`;
 		movieActor.textContent = `(${selectedQuote.actor})`;
 		movieCharacter.textContent = selectedQuote.character;
