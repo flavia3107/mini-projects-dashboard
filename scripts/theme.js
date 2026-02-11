@@ -1,7 +1,7 @@
 export function setTheme() {
 	const toggleButton = document.querySelector('#theme-toggle button');
 	const icon = toggleButton.querySelector('i');
-	const savedTheme = localStorage.getItem('theme') || 'light';
+	const savedTheme = localStorage.getItem('active-theme') || 'light';
 	const img = document.querySelector('.logo-img');
 
 	applyTheme(savedTheme);
@@ -11,7 +11,7 @@ export function setTheme() {
 		const currentTheme = document.body.classList.contains('theme-light') ? 'light' : 'dark';
 		const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 		applyTheme(newTheme);
-		localStorage.setItem('theme', newTheme);
+		localStorage.setItem('active-theme', newTheme);
 		updateIcon(newTheme);
 	});
 
