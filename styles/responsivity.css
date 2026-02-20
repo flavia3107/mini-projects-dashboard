@@ -79,10 +79,12 @@
 	.widget.stopwatch-widget {
 		min-width: 23rem;
 		height: 23rem;
+		width: 100%;
 	}
 
 	.calculator-widget {
 		height: 31rem !important;
+		width: 100%;
 	}
 
 	#bmi-widget,
